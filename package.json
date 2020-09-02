@@ -1,0 +1,46 @@
+{
+  "name": "@hydrogen-design-system/component-comp",
+  "version": "0.0.1",
+  "description": "A new Hydrogen component.",
+  "main": "npm.js",
+  "scripts": {
+    "init": "npx gulp init",
+    "dev": "npx gulp dev",
+    "build": "npx gulp build",
+    "prepublishOnly": "npx gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/URL-TO-REPO.git"
+  },
+  "author": "[AUTHOR]",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/URL-TO-REPO/issues"
+  },
+  "homepage": "https://github.com/URL-TO-REPO#readme",
+  "dependencies": {
+    "cash-dom": "^8.0.0"
+  },
+  "devDependencies": {
+    "@hydrogen-design-system/core": "latest",
+    "autoprefixer": "^9.7.3",
+    "browser-sync": "^2.26.7",
+    "browserslist": "^4.8.2",
+    "cssnano": "^4.1.10",
+    "del": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-gzip": "^1.4.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.1",
+    "sass": "^1.26.8",
+    "yargs": "^15.4.0"
+  },
+  "browserslist": [
+    "last 1 version and not dead"
+  ]
+}

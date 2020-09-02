@@ -1,0 +1,35 @@
+// Hydrogen / Component / System
+// This file is processed and then imported into @hydrogen-design-system/system
+
+// File paths must respect how the system's architecture works.
+// - root
+//   - core
+//     - styles
+//   - properties
+//     - styles
+//     - individual properties
+//       - styles
+//   - components
+//     - individual components
+//       - [you're here]
+
+// Unlike the versioned copy, this stylesheet doesn't require Hydrogen's core because the core is imported by the system itself in that repository later on.
+
+// Forward theme variables from the core module first so that they can be accessed and modified.
+@forward "../../core/defaults";
+
+// Load map variables from the core module so that the component can leverage them when generating selectors.
+@use "../../core/maps" as maps;
+
+// Load theme variables from the core module so that they can be passed to the component mixins.
+@use "../../core/defaults" as var;
+
+// Load the component so that its mixins can be accessed.
+@use "component-$COMP" as *;
+
+// Load the generic mixin with its respective theme variables.
+[data-h2-$COMP] {
+    @include h2-component-$COMP-generic();
+}
+
+// Load custom mixins here. Please refer to existing components for examples, as well as how to pass variables, maps, and functions. 
