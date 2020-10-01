@@ -48,10 +48,6 @@
     }
     // Menu
     [data-h2-menu] {
-        // Load the component's unique reset styles.
-        @include h2-component-menu-reset();
-        // Load the core.
-        @include core.h2-universal-reset;
         // Load the generic component mixin.
         @include h2-component-menu-generic(
             // Main Menu
