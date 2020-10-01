@@ -1,7 +1,7 @@
 {
-  "name": "@hydrogen-design-system/component-comp",
+  "name": "@hydrogen-design-system/component-menu",
   "version": "0.0.1",
-  "description": "A new Hydrogen component.",
+  "description": "Hydrogen's menu component.",
   "main": "npm.js",
   "scripts": {
     "init": "npx gulp init",
@@ -11,21 +11,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/URL-TO-REPO.git"
+    "url": "git+https://github.com/hydrogen-design-system/component-menu.git"
   },
-  "author": "[AUTHOR]",
+  "author": "Josh Beveridge",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/URL-TO-REPO/issues"
+    "url": "https://github.com/hydrogen-design-system/component-menu/issues"
   },
-  "homepage": "https://github.com/URL-TO-REPO#readme",
+  "homepage": "https://github.com/hydrogen-design-system/component-menu#readme",
   "dependencies": {
     "cash-dom": "^8.0.0"
   },
   "devDependencies": {
-    "@hydrogen-design-system/core": "latest",
+    "@hydrogen-design-system/core": "0.0.26",
     "autoprefixer": "^9.7.3",
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.26.12",
     "browserslist": "^4.8.2",
     "cssnano": "^4.1.10",
     "del": "^3.0.0",

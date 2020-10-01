@@ -15,7 +15,7 @@ const sass = require('gulp-sass');
 sass.compiler = require('sass');
 
 // Component
-const componentArg = "$COMP";
+const componentArg = "menu";
 const component = "component-" + componentArg.replace(/"/g, "");
 
 // Markup Prep
