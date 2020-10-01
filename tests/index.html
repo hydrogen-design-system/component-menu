@@ -3,112 +3,112 @@
         <link async rel="stylesheet" href="h2-component-menu.css">
     </head>
     <body>
-        <div>
-            <div data-h2-menu-wrapper-$H2VER="top(center, static)">
-                <button 
-                    aria-label="This button opens the main navigation menu."
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    data-h2-mobile-menu-trigger
-                    type="button" role="button">
-                    <span data-h2-mobile-menu-trigger-open-label>Menu</span><span data-h2-mobile-menu-trigger-close-label>Close</span>
-                </button>
-                <nav 
-                    data-h2-menu
-                    role="navigation">
-                    <ul data-h2-main-menu>
-                        <li><a href="" role="menuitem" title="">Menu Item 01</a></li>
-                        <li><a href="" role="menuitem" title="">Menu Item 02</a></li>
-                        <li><a href="" role="menuitem" title="">Menu Item 03</a></li>
-                        <li><a href="" role="menuitem" title="">Menu Item 04</a></li>
-                        <!-- This item provides an example of how a submenu works. Items with submenus require the button element. Submenus can be nested up to a hard cap of 5 layers. -->
-                        <li>
-                            <!-- The parent menu item. -->
-                            <a href="" role="menuitem" title="">Menu Item 05</a>
-                            <!-- The submenu trigger. Note the data-c-add/remove properties. -->
-                            <button 
-                                aria-expanded="false"
-                                data-h2-submenu-trigger>
-                                <span data-h2-submenu-trigger-add-icon>+</span>
-                                <span data-h2-submenu-trigger-remove-icon>-</span>
-                            </button>
-                            <!-- The submenu. -->
-                            <ul data-h2-submenu>
-                                <li><a href="#here" role="menuitem" title="">Sub1menu Item 01</a></li>
-                                <li><a href="" role="menuitem" title="">Sub1menu Item 02</a></li>
-                                <li>
-                                    <!-- The parent menu item. -->
-                                    <a href="" role="menuitem" title="">Sub1menu Item 03</a>
-                                    <!-- The submenu trigger. Note the data-c-add/remove properties. -->
-                                    <button 
-                                        aria-expanded="false"
-                                        data-h2-submenu-trigger>
-                                        <span data-h2-submenu-trigger-add-icon>+</span>
-                                        <span data-h2-submenu-trigger-remove-icon>-</span>
-                                    </button>
-                                    <!-- The submenu. -->
-                                    <ul data-h2-submenu>
-                                        <li><a href="" role="menuitem" title="">Sub2menu Item 01</a></li>
-                                        <li><a href="" role="menuitem" title="">Sub2menu Item 02</a></li>
-                                        <li>
-                                            <!-- The parent menu item. -->
-                                            <a href="" role="menuitem" title="">Sub2menu Item 03</a>
-                                            <!-- The submenu trigger. Note the data-c-add/remove properties. -->
-                                            <button 
-                                                aria-expanded="false"
-                                                data-h2-submenu-trigger>
-                                                <span data-h2-submenu-trigger-add-icon>+</span>
-                                                <span data-h2-submenu-trigger-remove-icon>-</span>
-                                            </button>
-                                            <!-- The submenu. -->
-                                            <ul data-h2-submenu>
-                                                <li><a href="" role="menuitem" title="">Sub3menu Item 01</a></li>
-                                                <li><a href="" role="menuitem" title="">Sub3menu Item 02</a></li>
-                                                <li>
-                                                    <!-- The parent menu item. -->
-                                                    <a href="" role="menuitem" title="">Sub3menu Item 03</a>
-                                                    <!-- The submenu trigger. Note the data-c-add/remove properties. -->
-                                                    <button 
-                                                        aria-expanded="false"
-                                                        data-h2-submenu-trigger>
-                                                        <span data-h2-submenu-trigger-add-icon>+</span>
-                                                        <span data-h2-submenu-trigger-remove-icon>-</span>
-                                                    </button>
-                                                    <!-- The submenu. -->
-                                                    <ul data-h2-submenu>
-                                                        <li><a href="" role="menuitem" title="">Sub4menu Item 01</a></li>
-                                                        <li><a href="" role="menuitem" title="">Sub4menu Item 02</a></li>
-                                                        <li>
-                                                            <!-- The parent menu item. -->
-                                                            <a href="" role="menuitem" title="">Sub4menu Item 03</a>
-                                                            <!-- The submenu trigger. Note the data-c-add/remove properties. -->
-                                                            <button 
-                                                                aria-expanded="false"
-                                                                data-h2-submenu-trigger>
-                                                                <span data-h2-submenu-trigger-add-icon>+</span>
-                                                                <span data-h2-submenu-trigger-remove-icon>-</span>
-                                                            </button>
-                                                            <!-- The submenu. -->
-                                                            <ul data-h2-submenu>
-                                                                <li><a href="" role="menuitem" title="">Sub5menu Item 01</a></li>
-                                                                <li><a href="" role="menuitem" title="">Sub5menu Item 02</a></li>
-                                                            </ul>
-                                                        </li>
-                                                        <li><a href="" role="menuitem" title="">Sub4menu Item 04</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="" role="menuitem" title="">Sub3menu Item 04</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="" role="menuitem" title="">Sub2menu Item 04</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="" role="menuitem" title="">Sub1menu Item 04</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="" role="menuitem" title="">Menu Item 06</a></li>
-                    </ul>
-                </nav>
+        <div data-h2-menu-wrapper-$H2VER="side(left)">
+            <button 
+                aria-label="This button opens the main navigation menu."
+                aria-expanded="false"
+                aria-haspopup="true"
+                data-h2-mobile-menu-trigger
+                type="button" role="button">
+                <span data-h2-mobile-menu-trigger-open-label>Menu</span><span data-h2-mobile-menu-trigger-close-label>Close</span>
+            </button>
+            <nav 
+                data-h2-menu
+                role="navigation">
+                <ul data-h2-main-menu>
+                    <li><a href="" role="menuitem" title="">Menu Item 01</a></li>
+                    <li><a href="" role="menuitem" title="">Menu Item 02</a></li>
+                    <li><a href="" role="menuitem" title="">Menu Item 03</a></li>
+                    <li><a href="" role="menuitem" title="">Menu Item 04</a></li>
+                    <!-- This item provides an example of how a submenu works. Items with submenus require the button element. Submenus can be nested up to a hard cap of 5 layers. -->
+                    <li>
+                        <!-- The parent menu item. -->
+                        <a href="" role="menuitem" title="">Menu Item 05</a>
+                        <!-- The submenu trigger. Note the data-c-add/remove properties. -->
+                        <button 
+                            aria-expanded="false"
+                            data-h2-submenu-trigger>
+                            <span data-h2-submenu-trigger-add-icon>+</span>
+                            <span data-h2-submenu-trigger-remove-icon>-</span>
+                        </button>
+                        <!-- The submenu. -->
+                        <ul data-h2-submenu>
+                            <li><a href="#here" role="menuitem" title="">Sub1menu Item 01</a></li>
+                            <li><a href="" role="menuitem" title="">Sub1menu Item 02</a></li>
+                            <li>
+                                <!-- The parent menu item. -->
+                                <a href="" role="menuitem" title="">Sub1menu Item 03</a>
+                                <!-- The submenu trigger. Note the data-c-add/remove properties. -->
+                                <button 
+                                    aria-expanded="false"
+                                    data-h2-submenu-trigger>
+                                    <span data-h2-submenu-trigger-add-icon>+</span>
+                                    <span data-h2-submenu-trigger-remove-icon>-</span>
+                                </button>
+                                <!-- The submenu. -->
+                                <ul data-h2-submenu>
+                                    <li><a href="" role="menuitem" title="">Sub2menu Item 01</a></li>
+                                    <li><a href="" role="menuitem" title="">Sub2menu Item 02</a></li>
+                                    <li>
+                                        <!-- The parent menu item. -->
+                                        <a href="" role="menuitem" title="">Sub2menu Item 03</a>
+                                        <!-- The submenu trigger. Note the data-c-add/remove properties. -->
+                                        <button 
+                                            aria-expanded="false"
+                                            data-h2-submenu-trigger>
+                                            <span data-h2-submenu-trigger-add-icon>+</span>
+                                            <span data-h2-submenu-trigger-remove-icon>-</span>
+                                        </button>
+                                        <!-- The submenu. -->
+                                        <ul data-h2-submenu>
+                                            <li><a href="" role="menuitem" title="">Sub3menu Item 01</a></li>
+                                            <li><a href="" role="menuitem" title="">Sub3menu Item 02</a></li>
+                                            <li>
+                                                <!-- The parent menu item. -->
+                                                <a href="" role="menuitem" title="">Sub3menu Item 03</a>
+                                                <!-- The submenu trigger. Note the data-c-add/remove properties. -->
+                                                <button 
+                                                    aria-expanded="false"
+                                                    data-h2-submenu-trigger>
+                                                    <span data-h2-submenu-trigger-add-icon>+</span>
+                                                    <span data-h2-submenu-trigger-remove-icon>-</span>
+                                                </button>
+                                                <!-- The submenu. -->
+                                                <ul data-h2-submenu>
+                                                    <li><a href="" role="menuitem" title="">Sub4menu Item 01</a></li>
+                                                    <li><a href="" role="menuitem" title="">Sub4menu Item 02</a></li>
+                                                    <li>
+                                                        <!-- The parent menu item. -->
+                                                        <a href="" role="menuitem" title="">Sub4menu Item 03</a>
+                                                        <!-- The submenu trigger. Note the data-c-add/remove properties. -->
+                                                        <button 
+                                                            aria-expanded="false"
+                                                            data-h2-submenu-trigger>
+                                                            <span data-h2-submenu-trigger-add-icon>+</span>
+                                                            <span data-h2-submenu-trigger-remove-icon>-</span>
+                                                        </button>
+                                                        <!-- The submenu. -->
+                                                        <ul data-h2-submenu>
+                                                            <li><a href="" role="menuitem" title="">Sub5menu Item 01</a></li>
+                                                            <li><a href="" role="menuitem" title="">Sub5menu Item 02</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="" role="menuitem" title="">Sub4menu Item 04</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="" role="menuitem" title="">Sub3menu Item 04</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="" role="menuitem" title="">Sub2menu Item 04</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="" role="menuitem" title="">Sub1menu Item 04</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" role="menuitem" title="">Menu Item 06</a></li>
+                </ul>
+            </nav>
+            <main>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni.</p>
                 <br>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni.</p>
@@ -130,7 +130,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni.</p>
                 <br>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, officiis dicta adipisci delectus, nisi sit, ea aliquam ut molestiae ipsa sunt vitae asperiores qui veniam modi harum provident suscipit magni.</p>
-            </div>
+            </main>
         </div>
         <script src="cash.min.js"></script>
         <script src="h2-component-menu.js"></script>

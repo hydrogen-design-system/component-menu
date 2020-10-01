@@ -126,27 +126,33 @@
 
 // Sidebar Style Menus
 [data-h2-menu-wrapper*="side"] {
-    @media #{var.$mq-medium} {
-        margin-left: calc((1/4) * 100%);
-        overflow-x: hidden;
-        width: calc((3/4) * 100%);
-    }
     [data-h2-menu] {
         @include h2-component-menu-sidebar (
             $mq-medium: var.$mq-medium
         );
+        &+div,
+        &+main {
+            @media #{var.$mq-medium} {
+                margin-left: calc((1/4) * 100%);
+                overflow-x: hidden;
+                width: calc((3/4) * 100%);
+            }
+        }
     }
 }
 [data-h2-menu-wrapper*="side"][data-h2-menu-wrapper*="right"] {
-    @media #{var.$mq-medium} {
-        margin-left: auto;
-        margin-right: calc((1/4) * 100%);
-        overflow-x: hidden;
-        width: calc((3/4) * 100%);
-    }
     [data-h2-menu] {
         @include h2-component-menu-sidebar-right (
             $mq-medium: var.$mq-medium
         );
+        &+div,
+        &+main {
+            @media #{var.$mq-medium} {
+                margin-left: auto;
+                margin-right: calc((1/4) * 100%);
+                overflow-x: hidden;
+                width: calc((3/4) * 100%);
+            }
+        }
     }
 }
