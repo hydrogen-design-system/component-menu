@@ -3,8 +3,8 @@
 // Border Options
 $border-thickness-thin: 1px !default;
 $border-thickness-thick: .5rem !default;
+
 $border-radius-round: 5px !default;
-$border-radius-pill: 20rem !default;
 
 // Color Variables
 
@@ -16,11 +16,11 @@ $border-radius-pill: 20rem !default;
     $gray: rgba(150, 150, 150, 1) !default;
 
     // Theme Colors
-    $theme-color-1: #F14948 !default;
-    $theme-color-2: #F1604D !default;
-    $theme-color-3: #F47953 !default;
-    $theme-color-4: #F79559 !default;
-    $theme-color-5: #F7AF5B !default;
+    $theme-color-1: #c59fff !default;
+    $theme-color-2: #9D5CFF !default;
+    $theme-color-3: #613DC1 !default;
+    $theme-color-4: #00E5E3 !default;
+    $theme-color-5: #0A9DAE !default;
 
     // Go, Slow, Stop
     $go: green !default;
@@ -140,13 +140,13 @@ $layout-small: 39rem !default;
     $mq-large: "screen and (min-width: 100em)" !default;
 
 // Whitespace Variables
-$margin: 1.25vw !default;
-$padding: 1.25vw !default;
+$margin: 1.5rem !default;
+$padding: 1.5rem !default;
 
 // Component Options
 
     // Cards
-    $card-shadow: 0 3px 5px rgba(0, 0, 0, .5) !default;
+    $card-shadow: 0 5px 10px rgba(0, 0, 0, .3) !default;
 
     // Carousels
     $carousel-dot-color: lighten($gray, 35%) !default;

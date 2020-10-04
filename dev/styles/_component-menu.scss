@@ -121,7 +121,7 @@
                 display: block;
                 font-size: $font-scale-default;
                 line-height: $line-height;
-                margin: 0 calc(#{$padding} * 5);
+                margin: 0 $padding;
                 padding-top: 2vh;
                 padding-right: 7vh;
                 padding-bottom: 2vh;
@@ -136,7 +136,7 @@
                 padding: 2vh 3vh;
                 position: absolute;
                 top: 1px;
-                right: calc(#{$padding} * 5);
+                right: $padding;
                 [data-h2-submenu-trigger-add-icon] {
                     display: block;
                     font-size: $font-scale-default;
@@ -211,7 +211,7 @@
     }
     [data-h2-main-menu] >li >[data-h2-submenu] >li >[role="menuitem"] {
         color: $submenu-1-font-color;
-        margin-left: calc(#{$padding} * 7);
+        margin-left: calc(#{$padding} * 2);
     }
     [data-h2-main-menu] >li >[data-h2-submenu] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
     [data-h2-main-menu] >li >[data-h2-submenu] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
@@ -234,7 +234,7 @@
     }
     [data-h2-main-menu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[role="menuitem"] {
         color: $submenu-2-font-color;
-        margin-left: calc(#{$padding} * 9);
+        margin-left: calc(#{$padding} * 3);
     }
     [data-h2-main-menu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
     [data-h2-main-menu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
@@ -257,7 +257,7 @@
     }
     [data-h2-main-menu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[role="menuitem"] {
         color: $submenu-3-font-color;
-        margin-left: calc(#{$padding} * 11);
+        margin-left: calc(#{$padding} * 4);
     }
     [data-h2-main-menu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
     [data-h2-main-menu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
@@ -280,7 +280,7 @@
     }
     [data-h2-main-menu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[role="menuitem"] {
         color: $submenu-4-font-color;
-        margin-left: calc(#{$padding} * 13);
+        margin-left: calc(#{$padding} * 5);
     }
     [data-h2-main-menu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
     [data-h2-main-menu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
@@ -303,7 +303,7 @@
     }
     [data-h2-main-menu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[role="menuitem"] {
         color: $submenu-5-font-color;
-        margin-left: calc(#{$padding} * 15);
+        margin-left: calc(#{$padding} * 6);
     }
     [data-h2-main-menu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
     [data-h2-main-menu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
