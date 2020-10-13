@@ -2,6 +2,11 @@
   "name": "@hydrogen-design-system/component-menu",
   "version": "0.0.4",
   "description": "Hydrogen's menu component.",
+  "keywords": [
+    "Hydrogen",
+    "component",
+    "menu"
+  ],
   "main": "npm.js",
   "scripts": {
     "init": "npx gulp init",
@@ -18,15 +23,15 @@
   "bugs": {
     "url": "https://github.com/hydrogen-design-system/component-menu/issues"
   },
-  "homepage": "https://github.com/hydrogen-design-system/component-menu#readme",
+  "homepage": "https://hydrogen.design",
   "dependencies": {
-    "cash-dom": "^8.0.0"
+    "cash-dom": "^8.1.0"
   },
   "devDependencies": {
-    "@hydrogen-design-system/core": "0.0.33",
+    "@hydrogen-design-system/core": "0.0.34",
     "autoprefixer": "^9.7.3",
     "browser-sync": "^2.26.12",
-    "browserslist": "^4.8.2",
+    "browserslist": "^4.14.5",
     "cssnano": "^4.1.10",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
@@ -37,7 +42,7 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.1",
-    "sass": "^1.26.8",
+    "sass": "^1.27.0",
     "yargs": "^15.4.0"
   },
   "browserslist": [
