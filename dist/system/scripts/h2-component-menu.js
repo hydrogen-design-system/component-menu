@@ -9,7 +9,7 @@ $.fn.h2ComMenHasAttr = function (name) {
 // Toggle submenu.
 
     // Open script.
-    function openSubmenu(menuItem, subMenuTrigger) {
+    function h2ComMenOpenSubmenu(menuItem, subMenuTrigger) {
         // Open the submenu.
         $(menuItem).parent().addClass("h2-active");
         $(menuItem).attr("aria-expanded", "true");
@@ -51,7 +51,7 @@ $.fn.h2ComMenHasAttr = function (name) {
     }
 
     // Close script.
-    function closeSubmenu(menuItem, subMenuTrigger) {
+    function h2ComMenCloseSubmenu(menuItem, subMenuTrigger) {
         // Remove all event listeners.
         $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.upDownArrow");
         $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.rightArrow");
@@ -116,9 +116,9 @@ $.fn.h2ComMenHasAttr = function (name) {
         }
         // Check if the parent <li> is active or not.
         if ($(trigger).parent().hasClass("h2-active")) {
-            closeSubmenu(menuItem, subMenuTrigger);
+            h2ComMenCloseSubmenu(menuItem, subMenuTrigger);
         } else {
-            openSubmenu(menuItem, subMenuTrigger);
+            h2ComMenOpenSubmenu(menuItem, subMenuTrigger);
         }
     }
 
@@ -212,7 +212,7 @@ function h2ComMenEscapeTrigger(e, key, trigger) {
                 subMenuTrigger = $(trigger).parent().parent().siblings("[data-h2-submenu-trigger]");
                 parent = $(trigger).parent().parent().parent().parent();
                 // Close the submenu and focus the parent trigger.
-                closeSubmenu(menuItem, subMenuTrigger);
+                h2ComMenCloseSubmenu(menuItem, subMenuTrigger);
                 $(subMenuTrigger)[0].focus();
             }
         } else if (trigger.getAttribute('data-h2-submenu-trigger') === "") {
@@ -225,7 +225,7 @@ function h2ComMenEscapeTrigger(e, key, trigger) {
                 subMenuTrigger = trigger;
                 parent = $(trigger).parent().parent();
                 // Close the submenu and focus the parent trigger.
-                closeSubmenu(menuItem, subMenuTrigger);
+                h2ComMenCloseSubmenu(menuItem, subMenuTrigger);
                 $(subMenuTrigger)[0].focus();
             } else {
                 // console.log("This trigger is a trigger inside the open submenu.");
@@ -257,7 +257,7 @@ function h2ComMenEscapeTrigger(e, key, trigger) {
                     subMenuTrigger = $(trigger).parent().parent().siblings("[data-h2-submenu-trigger]");
                     parent = $(trigger).parent().parent().parent().parent();
                     // Close the submenu and focus the parent trigger.
-                    closeSubmenu(menuItem, subMenuTrigger);
+                    h2ComMenCloseSubmenu(menuItem, subMenuTrigger);
                     $(subMenuTrigger)[0].focus();
                 }
             }
