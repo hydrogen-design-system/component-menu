@@ -184,10 +184,10 @@ function h2ComMenEscapeTrigger$H2VERJS(e, key, trigger) {
         var parent = "";
         // Check to see if trigger is a submenu item or the submenu's trigger (because this requires different DOM levels to be checked).
         if (trigger.getAttribute('role') === 'menuitem') {
-            console.log("You exited on a menu item.");
+            // console.log("You exited on a menu item.");
             // Check to see if you're trying to close the main menu.
             if ($(trigger).parent().parent().parent().h2ComMenHasAttr$H2VERJS("data-h2-menu")) {
-                console.log("You're trying to close the main menu.");
+                // console.log("You're trying to close the main menu.");
                 if ($("[data-h2-menu-wrapper$H2VERCSS] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
                     var menu = $("[data-h2-menu-wrapper$H2VERCSS] [data-h2-menu]");
                     // Remove event listeners from all menus.
@@ -216,10 +216,10 @@ function h2ComMenEscapeTrigger$H2VERJS(e, key, trigger) {
                 $(subMenuTrigger)[0].focus();
             }
         } else if (trigger.getAttribute('data-h2-submenu-trigger') === "") {
-            console.log("You exited on a submenu trigger.");
+            // console.log("You exited on a submenu trigger.");
             // Figure out if the trigger was the parent one, or if it's one in the active menu by testing to see if the sibling submenu is active or not.
             if ($(trigger).parent().hasClass("h2-active")) {
-                console.log("This trigger is the parent trigger that opens the submenu you're trying to close.");
+                // console.log("This trigger is the parent trigger that opens the submenu you're trying to close.");
                 // Set the key elements based on this context.
                 menuItem = $(trigger).siblings("[role='menuitem']");
                 subMenuTrigger = trigger;
@@ -228,10 +228,10 @@ function h2ComMenEscapeTrigger$H2VERJS(e, key, trigger) {
                 closeSubmenu(menuItem, subMenuTrigger);
                 $(subMenuTrigger)[0].focus();
             } else {
-                console.log("This trigger is a trigger inside the open submenu.");
+                // console.log("This trigger is a trigger inside the open submenu.");
                 // Check to see if you're trying to close the main menu.
                 if ($(trigger).parent().parent().parent().h2ComMenHasAttr$H2VERJS("data-h2-menu")) {
-                    console.log("You're trying to close the main menu.");
+                    // console.log("You're trying to close the main menu.");
                     if ($("[data-h2-menu-wrapper$H2VERCSS] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
                         var menu = $("[data-h2-menu-wrapper$H2VERCSS] [data-h2-menu]");
                         // Remove event listeners from all menus.
@@ -251,7 +251,7 @@ function h2ComMenEscapeTrigger$H2VERJS(e, key, trigger) {
                         $("body").removeClass("h2-mobile-menu-body-lock");
                     }
                 } else {
-                    console.log("You're closing a submenu.")
+                    // console.log("You're closing a submenu.");
                     // Set the key elements based on this context.
                     menuItem = $(trigger).parent().parent().siblings("[role='menuitem']");
                     subMenuTrigger = $(trigger).parent().parent().siblings("[data-h2-submenu-trigger]");
@@ -327,7 +327,7 @@ function h2ComMenMainTabExit$H2VERJS(e, key, trigger) {
         // If the item was the first item and they tabbed up, close the menu and submenus.
         if (currentIndex == 0) {
             // If they tabbed up...
-            console.log("you're on the first item in the menu.")
+            // console.log("you're on the first item in the menu.");
             if (key == 9 && e.shiftKey) {
                 // Remove event listeners from all menus.
                 $("[data-h2-menu-wrapper$H2VERCSS] [data-h2-menu] *").off("keydown.upDownArrow");
@@ -349,7 +349,7 @@ function h2ComMenMainTabExit$H2VERJS(e, key, trigger) {
         // If the item was the last menu item and they tabbed down, close the menu and submenus.
         else if (currentIndex == itemCount) {
             // If they tabbed down...
-            console.log("you're on the last item in the menu.")
+            // console.log("you're on the last item in the menu.");
             if (key == 9 && !e.shiftKey) {
                 // Remove event listeners from all menus.
                 $("[data-h2-menu-wrapper$H2VERCSS] [data-h2-menu] *").off("keydown.upDownArrow");
