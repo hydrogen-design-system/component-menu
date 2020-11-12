@@ -30,8 +30,8 @@
 }
 
 // Load the core and component mixins within the versioned component attribute, while passing them their respective theme variables.
-// $H2VER is replaced during the Gulp build script with the current component version, set in Gulpfile.js, before Sass is compiled.
-[data-h2-menu-wrapper-$H2VER] {
+// _VERSION is replaced during the Gulp build script with the current component version, set in Gulpfile.js, before Sass is compiled.
+[data-h2-menu-wrapper_VERSION] {
     // Menu Trigger
     [data-h2-mobile-menu-trigger] {
         @include h2-component-menu-trigger(
@@ -90,41 +90,50 @@
 }
 
 // Top Style Menus
-[data-h2-menu-wrapper-$H2VER*="top"] {
+[data-h2-menu-wrapper_VERSION*="top"] {
     [data-h2-menu] {
         @include h2-component-menu-topbar(
             $mq-medium: var.$mq-medium,
+            $padding: var.$padding,
             $menu-divider-color: var.$menu-divider-color
         );
     }
 }
-[data-h2-menu-wrapper-$H2VER*="top"][data-h2-menu-wrapper-$H2VER*="sticky"] {
+[data-h2-menu-wrapper_VERSION*="top"][data-h2-menu-wrapper_VERSION*="sticky"] {
     [data-h2-menu] {
         @include h2-component-menu-topbar-sticky (
             $mq-medium: var.$mq-medium
         );
     }
 }
-[data-h2-menu-wrapper-$H2VER*="top"][data-h2-menu-wrapper-$H2VER*="center"] {
+[data-h2-menu-wrapper_VERSION*="top"][data-h2-menu-wrapper_VERSION*="center"] {
     [data-h2-menu] {
         @include h2-component-menu-topbar-center (
             $mq-medium: var.$mq-medium
         );
     }
 }
-[data-h2-menu-wrapper-$H2VER*="top"][data-h2-menu-wrapper-$H2VER*="right"] {
+[data-h2-menu-wrapper_VERSION*="top"][data-h2-menu-wrapper_VERSION*="right"] {
     [data-h2-menu] {
         @include h2-component-menu-topbar-right (
             $mq-medium: var.$mq-medium
         );
     }
 }
+[data-h2-menu-wrapper_VERSION*="top"][data-h2-menu-wrapper_VERSION*="split"] {
+  [data-h2-menu] {
+    @include h2-component-menu-topbar-split (
+      $mq-medium: var.$mq-medium
+    );
+  }
+}
 
 // Sidebar Style Menus
-[data-h2-menu-wrapper-$H2VER*="side"] {
+[data-h2-menu-wrapper_VERSION*="side"] {
     [data-h2-menu] {
         @include h2-component-menu-sidebar (
-            $mq-medium: var.$mq-medium
+            $mq-medium: var.$mq-medium,
+            $padding: var.$padding
         );
         &+div,
         &+main {
@@ -136,10 +145,11 @@
         }
     }
 }
-[data-h2-menu-wrapper-$H2VER*="side"][data-h2-menu-wrapper-$H2VER*="right"] {
+[data-h2-menu-wrapper_VERSION*="side"][data-h2-menu-wrapper_VERSION*="right"] {
     [data-h2-menu] {
         @include h2-component-menu-sidebar-right (
-            $mq-medium: var.$mq-medium
+            $mq-medium: var.$mq-medium,
+            $padding: var.$padding
         );
         &+div,
         &+main {

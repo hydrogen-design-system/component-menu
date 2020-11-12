@@ -98,6 +98,7 @@
     [data-h2-menu] {
         @include h2-component-menu-topbar(
             $mq-medium: var.$mq-medium,
+            $padding: var.$padding,
             $menu-divider-color: var.$menu-divider-color
         );
     }
@@ -123,12 +124,20 @@
         );
     }
 }
+[data-h2-menu-wrapper*="top"][data-h2-menu-wrapper*="split"] {
+  [data-h2-menu] {
+    @include h2-component-menu-topbar-split (
+      $mq-medium: var.$mq-medium
+    );
+  }
+}
 
 // Sidebar Style Menus
 [data-h2-menu-wrapper*="side"] {
     [data-h2-menu] {
         @include h2-component-menu-sidebar (
-            $mq-medium: var.$mq-medium
+            $mq-medium: var.$mq-medium,
+            $padding: var.$padding
         );
         &+div,
         &+main {
@@ -143,7 +152,8 @@
 [data-h2-menu-wrapper*="side"][data-h2-menu-wrapper*="right"] {
     [data-h2-menu] {
         @include h2-component-menu-sidebar-right (
-            $mq-medium: var.$mq-medium
+            $mq-medium: var.$mq-medium,
+            $padding: var.$padding
         );
         &+div,
         &+main {

@@ -3,7 +3,7 @@ import $ from "cash-dom"
 // Hydrogen / Component / Scripts
 
 // "hasAttr" Function
-$.fn.h2ComMenHasAttr = function (name) {
+$.fn.h2ComMenHasAttr0010 = function (name) {
   var attr = $(this).attr(name);
   return (typeof attr !== typeof undefined && attr !== false);
 };
@@ -11,18 +11,18 @@ $.fn.h2ComMenHasAttr = function (name) {
 // Toggle submenu.
 
   // Open script.
-  function h2ComMenOpenSubmenu(menuItem, subMenuTrigger) {
+  function h2ComMenOpenSubmenu0010(menuItem, subMenuTrigger) {
     // Open the submenu.
     $(menuItem).parent().addClass("h2-active");
     $(menuItem).attr("aria-expanded", "true");
     $(subMenuTrigger).attr("aria-expanded", "true");
     // Remove all event listeners.
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.upDownArrow");
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.rightArrow");
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.escape");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.escape");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.upDownArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.rightArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.escape");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.escape");
     // Find submenu and it's items.
     var subMenuItems = [];
     $(menuItem).siblings("[data-h2-menulist]").children("li").each(function() {
@@ -37,34 +37,34 @@ $.fn.h2ComMenHasAttr = function (name) {
     // Add event listeners.
     $(subMenuItems).on("keydown.rightArrow", function(e) {
       var key = e.keyCode || e.which;
-      h2ComMenRightTrigger(e, key, this);
+      h2ComMenRightTrigger0010(e, key, this);
     });
     $(subMenuItems).on("keydown.upDownArrow", function(e) {
       var key = e.keyCode || e.which;
       var itemCount = $(subMenuItems).length - 1;
-      h2ComMenUpDownLoop(e, key, subMenuItems, itemCount);
+      h2ComMenUpDownLoop0010(e, key, subMenuItems, itemCount);
     });
     $(subMenuItems).on("keydown.escape", function(e) {
       var key = e.keyCode || e.which;
-      h2ComMenEscapeTrigger(e, key, this);
+      h2ComMenEscapeTrigger0010(e, key, this);
     });
     // Focus first menu item.
     $(subMenuItems)[0].focus();
   }
 
   // Close script.
-  function h2ComMenCloseSubmenu(menuItem, subMenuTrigger) {
+  function h2ComMenCloseSubmenu0010(menuItem, subMenuTrigger) {
     // Remove all event listeners.
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.upDownArrow");
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.rightArrow");
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.escape");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.escape");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.upDownArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.rightArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.escape");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.escape");
     // Find parent menu and its items.
     var parentMenuItems = [];
     // Check to see if the main menu is the parent, and whether it is split.
-    if ($(menuItem).parent().parent().parent().h2ComMenHasAttr("data-h2-menu") == true) {
+    if ($(menuItem).parent().parent().parent().h2ComMenHasAttr0010("data-h2-menu") == true) {
       $(menuItem).parent().parent().parent().children("[data-h2-menulist]").each(function() {
         $(this).children("li").each(function() {
           if ($(this).children("[role='menuitem']")) {
@@ -93,23 +93,23 @@ $.fn.h2ComMenHasAttr = function (name) {
     } 
     else {
       // Since the parent is the main menu, check to see if it's mobile activated, and if it is, add the mobile menu trigger to the list.
-      if ($("[data-h2-menu-wrapper] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
+      if ($("[data-h2-menu-wrapper-0010] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
           parentMenuItems = $(parentMenuItems).add($("[data-h2-mobile-menu-trigger]"));
       }
     }
     // Add event listeners.
     $(parentMenuItems).on("keydown.rightArrow", function(e) {
       var key = e.keyCode || e.which;
-      h2ComMenRightTrigger(e, key, this);
+      h2ComMenRightTrigger0010(e, key, this);
     });
     $(parentMenuItems).on("keydown.upDownArrow", function(e) {
       var key = e.keyCode || e.which;
       var itemCount = $(parentMenuItems).length - 1;
-      h2ComMenUpDownLoop(e, key, parentMenuItems, itemCount);
+      h2ComMenUpDownLoop0010(e, key, parentMenuItems, itemCount);
     });
     $(parentMenuItems).on("keydown.escape", function(e) {
       var key = e.keyCode || e.which;
-      h2ComMenEscapeTrigger(e, key, this);
+      h2ComMenEscapeTrigger0010(e, key, this);
     });
     // Close all nested submenus.
     $(menuItem).parent().find("[data-h2-menulist]").children("li").removeClass("h2-active");
@@ -121,7 +121,7 @@ $.fn.h2ComMenHasAttr = function (name) {
     $(subMenuTrigger).attr("aria-expanded", "false");
   }
 
-  function h2ComMenToggleSubmenu(trigger) {
+  function h2ComMenToggleSubmenu0010(trigger) {
     // Define key elements in the menu item.
     var menuItem = "";
     var subMenuTrigger = "";
@@ -134,14 +134,14 @@ $.fn.h2ComMenHasAttr = function (name) {
     }
     // Check if the parent <li> is active or not.
     if ($(trigger).parent().hasClass("h2-active")) {
-      h2ComMenCloseSubmenu(menuItem, subMenuTrigger);
+      h2ComMenCloseSubmenu0010(menuItem, subMenuTrigger);
     } else {
-      h2ComMenOpenSubmenu(menuItem, subMenuTrigger);
+      h2ComMenOpenSubmenu0010(menuItem, subMenuTrigger);
     }
   }
 
 // Up/down arrow loop.
-function h2ComMenUpDownLoop(e, key, items, itemCount) {
+function h2ComMenUpDownLoop0010(e, key, items, itemCount) {
   // Next item
   if (key == 40) {
     e.preventDefault();
@@ -177,7 +177,7 @@ function h2ComMenUpDownLoop(e, key, items, itemCount) {
 }
 
 // Right Trigger to Open Submenu
-function h2ComMenRightTrigger(e, key, trigger) {
+function h2ComMenRightTrigger0010(e, key, trigger) {
   if (key == 39) {
     e.preventDefault();
     // Check to see if there's even a submenu to open.
@@ -186,14 +186,14 @@ function h2ComMenRightTrigger(e, key, trigger) {
         // Do nothing.
       } else {
         // Open the submenu.
-        h2ComMenToggleSubmenu(trigger);
+        h2ComMenToggleSubmenu0010(trigger);
       }
     }
   }
 }
 
 // Left/Escape Trigger to Close Submenus
-function h2ComMenEscapeTrigger(e, key, trigger) {
+function h2ComMenEscapeTrigger0010(e, key, trigger) {
   if (key == 37 || key == 27) {
     e.preventDefault();
     // Set empty variables for key elements.
@@ -204,17 +204,17 @@ function h2ComMenEscapeTrigger(e, key, trigger) {
     if (trigger.getAttribute('role') === 'menuitem') {
       // console.log("You exited on a menu item.");
       // Check to see if you're trying to close the main menu.
-      if ($(trigger).parent().parent().parent().h2ComMenHasAttr("data-h2-menu")) {
+      if ($(trigger).parent().parent().parent().h2ComMenHasAttr0010("data-h2-menu")) {
         // console.log("You're trying to close the main menu.");
-        if ($("[data-h2-menu-wrapper] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
-          var menu = $("[data-h2-menu-wrapper] [data-h2-menu]");
+        if ($("[data-h2-menu-wrapper-0010] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
+          var menu = $("[data-h2-menu-wrapper-0010] [data-h2-menu]");
           // Remove event listeners from all menus.
-          $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.upDownArrow");
-          $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.rightArrow");
-          $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.escape");
-          $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
-          $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
-          $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.escape");
+          $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.upDownArrow");
+          $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.rightArrow");
+          $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.escape");
+          $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
+          $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
+          $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.escape");
           // Close all submenus.
           $(trigger).closest("[data-h2-menu]").find("[data-h2-menulist]").children("li").removeClass("h2-active");
           $(trigger).closest("[data-h2-menu]").find("[role='menuitem']").attr("aria-expanded", "false");
@@ -231,7 +231,7 @@ function h2ComMenEscapeTrigger(e, key, trigger) {
         subMenuTrigger = $(trigger).parent().parent().siblings("[data-h2-submenu-trigger]");
         parent = $(trigger).parent().parent().parent().parent();
         // Close the submenu and focus the parent trigger.
-        h2ComMenCloseSubmenu(menuItem, subMenuTrigger);
+        h2ComMenCloseSubmenu0010(menuItem, subMenuTrigger);
         $(subMenuTrigger)[0].focus();
       }
     } 
@@ -245,23 +245,23 @@ function h2ComMenEscapeTrigger(e, key, trigger) {
         subMenuTrigger = trigger;
         parent = $(trigger).parent().parent();
         // Close the submenu and focus the parent trigger.
-        h2ComMenCloseSubmenu(menuItem, subMenuTrigger);
+        h2ComMenCloseSubmenu0010(menuItem, subMenuTrigger);
         $(subMenuTrigger)[0].focus();
       } 
       else {
         // console.log("This trigger is a trigger inside the open submenu.");
         // Check to see if you're trying to close the main menu.
-        if ($(trigger).parent().parent().parent().h2ComMenHasAttr("data-h2-menu")) {
+        if ($(trigger).parent().parent().parent().h2ComMenHasAttr0010("data-h2-menu")) {
           // console.log("You're trying to close the main menu.");
-          if ($("[data-h2-menu-wrapper] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
-            var menu = $("[data-h2-menu-wrapper] [data-h2-menu]");
+          if ($("[data-h2-menu-wrapper-0010] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
+            var menu = $("[data-h2-menu-wrapper-0010] [data-h2-menu]");
             // Remove event listeners from all menus.
-            $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.upDownArrow");
-            $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.rightArrow");
-            $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.escape");
-            $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
-            $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
-            $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.escape");
+            $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.upDownArrow");
+            $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.rightArrow");
+            $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.escape");
+            $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
+            $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
+            $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.escape");
             // Close all submenus.
             $(trigger).closest("[data-h2-menu]").find("[data-h2-menulist]").children("li").removeClass("h2-active");
             $(trigger).closest("[data-h2-menu]").find("[role='menuitem']").attr("aria-expanded", "false");
@@ -279,7 +279,7 @@ function h2ComMenEscapeTrigger(e, key, trigger) {
           subMenuTrigger = $(trigger).parent().parent().siblings("[data-h2-submenu-trigger]");
           parent = $(trigger).parent().parent().parent().parent();
           // Close the submenu and focus the parent trigger.
-          h2ComMenCloseSubmenu(menuItem, subMenuTrigger);
+          h2ComMenCloseSubmenu0010(menuItem, subMenuTrigger);
           $(subMenuTrigger)[0].focus();
         }
       }
@@ -289,24 +289,24 @@ function h2ComMenEscapeTrigger(e, key, trigger) {
 
 // Main menu tab exit trigger.
 // This function closes all submenus and re-enables up/down, right, and left/escape key listeners if tab is pressed on any main menu items.
-function h2ComMenMainTabExit(e, key, trigger) {
+function h2ComMenMainTabExit0010(e, key, trigger) {
   // Close submenu function.
   // This is used by both the mobile and desktop logic.
   function closeSubmenus() {
     // Remove event listeners from all submenu items.
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.upDownArrow");
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.rightArrow");
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.escape");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.escape");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.upDownArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.rightArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.escape");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.escape");
     // Close all submenus
     $(trigger).closest("[data-h2-menu]").find("[data-h2-menulist]").children("li").removeClass("h2-active");
     $(trigger).closest("[data-h2-menu]").find("[role='menuitem']").attr("aria-expanded", "false");
     $(trigger).closest("[data-h2-menu]").find("[data-h2-submenu-trigger]").attr("aria-expanded", "false");
     // Get main menu items
     var resetMainMenuItems = [];
-    $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] >[data-h2-menulist]").each(function() {
       $(this).children("li").each(function() {
         if ($(this).children("[role='menuitem']")) {
           resetMainMenuItems = $(resetMainMenuItems).add($(this).children("[role='menuitem']"));
@@ -317,27 +317,27 @@ function h2ComMenMainTabExit(e, key, trigger) {
       });
     });
     // If the main menu is mobile activated, add the mobile menu trigger.
-    if ($("[data-h2-menu-wrapper] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
+    if ($("[data-h2-menu-wrapper-0010] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
       resetMainMenuItems = $(resetMainMenuItems).add($("[data-h2-mobile-menu-trigger]"));
     }
     // Enable listeners
     $(resetMainMenuItems).on("keydown.upDownArrow", function(e) {
       var key = e.keyCode || e.which;
       var itemCount = $(resetMainMenuItems).length - 1;
-      h2ComMenUpDownLoop(e, key, resetMainMenuItems, itemCount);
+      h2ComMenUpDownLoop0010(e, key, resetMainMenuItems, itemCount);
     });
     $(resetMainMenuItems).on("keydown.rightArrow", function(e) {
       var key = e.keyCode || e.which;
-      h2ComMenRightTrigger(e, key, this, resetMainMenuItems);
+      h2ComMenRightTrigger0010(e, key, this, resetMainMenuItems);
     });
   }
   // If the menu is mobile activated, you need to close the main menu on tab out of the first or last items.
-  if ($("[data-h2-menu-wrapper] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
-    var menu = $("[data-h2-menu-wrapper] [data-h2-menu]");
+  if ($("[data-h2-menu-wrapper-0010] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
+    var menu = $("[data-h2-menu-wrapper-0010] [data-h2-menu]");
     // Create an index of the main menu items, including the mobile trigger (this should be first in the order).
     var menuItemIndex = [];
-    menuItemIndex = $(menuItemIndex).add($("[data-h2-menu-wrapper]").find(" [data-h2-mobile-menu-trigger]"));
-    $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
+    menuItemIndex = $(menuItemIndex).add($("[data-h2-menu-wrapper-0010]").find(" [data-h2-mobile-menu-trigger]"));
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] >[data-h2-menulist]").each(function() {
       $(this).children("li").each(function() {
         if ($(this).children("[role='menuitem']")) {
           menuItemIndex = $(menuItemIndex).add($(this).children("[role='menuitem']"));
@@ -356,12 +356,12 @@ function h2ComMenMainTabExit(e, key, trigger) {
       // console.log("you're on the first item in the menu.");
       if (key == 9 && e.shiftKey) {
         // Remove event listeners from all menus.
-        $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.upDownArrow");
-        $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.rightArrow");
-        $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.escape");
-        $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
-        $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
-        $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.escape");
+        $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.upDownArrow");
+        $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.rightArrow");
+        $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.escape");
+        $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
+        $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
+        $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.escape");
         // Close all submenus.
         $(trigger).closest("[data-h2-menu]").find("[data-h2-menulist]").children("li").removeClass("h2-active");
         $(trigger).closest("[data-h2-menu]").find("[role='menuitem']").attr("aria-expanded", "false");
@@ -378,12 +378,12 @@ function h2ComMenMainTabExit(e, key, trigger) {
       // console.log("you're on the last item in the menu.");
       if (key == 9 && !e.shiftKey) {
         // Remove event listeners from all menus.
-        $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.upDownArrow");
-        $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.rightArrow");
-        $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.escape");
-        $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
-        $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
-        $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.escape");
+        $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.upDownArrow");
+        $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.rightArrow");
+        $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.escape");
+        $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
+        $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
+        $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.escape");
         // Close all submenus.
         $(trigger).closest("[data-h2-menu]").find("[data-h2-menulist]").children("li").removeClass("h2-active");
         $(trigger).closest("[data-h2-menu]").find("[role='menuitem']").attr("aria-expanded", "false");
@@ -411,17 +411,17 @@ function h2ComMenMainTabExit(e, key, trigger) {
 
 // Mobile menu toggle script.
 // This function opens or closes the main menu when on a narrow device.
-function h2ComMenMobileMenuToggle(trigger) {
-  var menu = $("[data-h2-menu-wrapper] [data-h2-menu]");
+function h2ComMenMobileMenuToggle0010(trigger) {
+  var menu = $("[data-h2-menu-wrapper-0010] [data-h2-menu]");
   // Close the menu.
   if ($(trigger).hasClass("h2-active")) {
     // Remove event listeners from all menus.
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.upDownArrow");
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.rightArrow");
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.escape");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.escape");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.upDownArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.rightArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.escape");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.escape");
     // Close all submenus.
     $(trigger).closest("[data-h2-menu]").find("[data-h2-menulist]").children("li").removeClass("h2-active");
     $(trigger).closest("[data-h2-menu]").find("[role='menuitem']").attr("aria-expanded", "false");
@@ -438,17 +438,17 @@ function h2ComMenMobileMenuToggle(trigger) {
     $(trigger).addClass("h2-active").attr("aria-expanded", "true");
     $("body").addClass("h2-mobile-menu-body-lock");
     // Remove event listeners from all menus.
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.upDownArrow");
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.rightArrow");
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.escape");
-    $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.mainTabExit");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.escape");
-    $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.mainTabExit");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.upDownArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.rightArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.escape");
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.mainTabExit");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.escape");
+    $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.mainTabExit");
     // Get main menu items.
     var resetMainMenuItems = [];
-    $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] >[data-h2-menulist]").each(function() {
       $(this).children("li").each(function() {
         if ($(this).children("[role='menuitem']")) {
           resetMainMenuItems = $(resetMainMenuItems).add($(this).children("[role='menuitem']"));
@@ -464,19 +464,19 @@ function h2ComMenMobileMenuToggle(trigger) {
     $(resetMainMenuItems).on("keydown.upDownArrow", function(e) {
       var key = e.keyCode || e.which;
       var itemCount = $(resetMainMenuItems).length - 1;
-      h2ComMenUpDownLoop(e, key, resetMainMenuItems, itemCount);
+      h2ComMenUpDownLoop0010(e, key, resetMainMenuItems, itemCount);
     });
     $(resetMainMenuItems).on("keydown.escape", function(e) {
       var key = e.keyCode || e.which;
-      h2ComMenEscapeTrigger(e, key, this);
+      h2ComMenEscapeTrigger0010(e, key, this);
     });
     $(resetMainMenuItems).on("keydown.mainTabExit", function(e) {
       var key = e.keyCode || e.which;
-      h2ComMenMainTabExit(e, key, this);
+      h2ComMenMainTabExit0010(e, key, this);
     });
     // Get main menu items with submenus.
     var resetMainMenuItemsWithSubmenus = [];
-    $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] >[data-h2-menulist]").each(function() {
       $(this).children("li").each(function() {
         if ($(this).children("[data-h2-menulist]").length > 0) {
           if ($(this).children("[role='menuitem']")) {
@@ -492,11 +492,11 @@ function h2ComMenMobileMenuToggle(trigger) {
     // Add right arrow event listener to main menu items with submenus.
     $(resetMainMenuItemsWithSubmenus).on("keydown.rightArrow", function(e) {
       var key = e.keyCode || e.which;
-      h2ComMenRightTrigger(e, key, this, resetMainMenuItemsWithSubmenus);
+      h2ComMenRightTrigger0010(e, key, this, resetMainMenuItemsWithSubmenus);
     });
     // Add tab listeners to tab out of the menu and close submenus.
     var resetAllMenuItems = [];
-    $("[data-h2-menu-wrapper] [data-h2-menu] [data-h2-menulist]").children("li").each(function() {
+    $("[data-h2-menu-wrapper-0010] [data-h2-menu] [data-h2-menulist]").children("li").each(function() {
       if ($(this).children("[role='menuitem']")) {
         resetAllMenuItems = $(resetAllMenuItems).add($(this).children("[role='menuitem']"));
       }
@@ -509,27 +509,27 @@ function h2ComMenMobileMenuToggle(trigger) {
 
     $(resetAllMenuItems).on("keydown.mainTabExit", function(e) {
       var key = e.keyCode || e.which;
-      h2ComMenMainTabExit(e, key, this);
+      h2ComMenMainTabExit0010(e, key, this);
     });
   }
 }
 
 // Mobile menu anchor navigation.
 // This function closes the menu when a link is clicked that specifically takes the user to a point on their current page.
-function h2ComMenMobileMenuAnchorClick(link) {
-  if ($("[data-h2-menu-wrapper] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
+function h2ComMenMobileMenuAnchorClick0010(link) {
+  if ($("[data-h2-menu-wrapper-0010] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
     // Set anchor destination.
     var destination = $(link).attr("href");
     if (destination.match("^#")) {
       // Create a variable for the menu.
       var menu = $(link).closest("[data-h2-menu]");
       // Remove event listeners from all menus.
-      $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.upDownArrow");
-      $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.rightArrow");
-      $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.escape");
-      $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
-      $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
-      $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.escape");
+      $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.upDownArrow");
+      $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.rightArrow");
+      $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.escape");
+      $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
+      $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
+      $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.escape");
       // Close all submenus.
       $(link).closest("[data-h2-menu]").find("[data-h2-menulist]").children("li").removeClass("h2-active");
       $(link).closest("[data-h2-menu]").find("[role='menuitem']").attr("aria-expanded", "false");
@@ -545,12 +545,12 @@ function h2ComMenMobileMenuAnchorClick(link) {
     var destination = $(link).attr("href");
     if (destination.match("^#")) {
       // Remove event listeners from all menus.
-      $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.upDownArrow");
-      $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.rightArrow");
-      $("[data-h2-menu-wrapper] [data-h2-menu] *").off("keydown.escape");
-      $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
-      $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
-      $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.escape");
+      $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.upDownArrow");
+      $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.rightArrow");
+      $("[data-h2-menu-wrapper-0010] [data-h2-menu] *").off("keydown.escape");
+      $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.upDownArrow");
+      $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.rightArrow");
+      $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").off("keydown.escape");
       // Close all submenus.
       $(link).closest("[data-h2-menu]").find("[data-h2-menulist]").children("li").removeClass("h2-active");
       $(link).closest("[data-h2-menu]").find("[role='menuitem']").attr("aria-expanded", "false");
@@ -559,10 +559,10 @@ function h2ComMenMobileMenuAnchorClick(link) {
   }
 }
 
-function test2() {
+function test20010() {
   // Get main menu items.
   var mainMenuItems = [];
-  $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
+  $("[data-h2-menu-wrapper-0010] [data-h2-menu] >[data-h2-menulist]").each(function() {
     $(this).children("li").each(function() {
       if ($(this).children("[role='menuitem']")) {
         mainMenuItems = $(mainMenuItems).add($(this).children("[role='menuitem']"));
@@ -576,15 +576,15 @@ function test2() {
   $(mainMenuItems).on("keydown.upDownArrow", function(e) {
     var key = e.keyCode || e.which;
     var itemCount = $(mainMenuItems).length - 1;
-    h2ComMenUpDownLoop(e, key, mainMenuItems, itemCount);
+    h2ComMenUpDownLoop0010(e, key, mainMenuItems, itemCount);
   });
 }
 
 
-function test4() {
+function test40010() {
   // Add tab listeners to tab out of the menu and close submenus.
   var allMenuItems = [];
-  $("[data-h2-menu-wrapper] [data-h2-menu] [data-h2-menulist]").children("li").each(function() {
+  $("[data-h2-menu-wrapper-0010] [data-h2-menu] [data-h2-menulist]").children("li").each(function() {
     if ($(this).children("[role='menuitem']")) {
       allMenuItems = $(allMenuItems).add($(this).children("[role='menuitem']"));
     }
@@ -594,14 +594,14 @@ function test4() {
   });
   $(allMenuItems).on("keydown.mainTabExit", function(e) {
     var key = e.keyCode || e.which;
-    h2ComMenMainTabExit(e, key, this);
+    h2ComMenMainTabExit0010(e, key, this);
   });
 }
 
-function test6() {
+function test60010() {
   // Get main menu items with submenus.
   var mainMenuItemsWithSubmenu = [];
-  $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
+  $("[data-h2-menu-wrapper-0010] [data-h2-menu] >[data-h2-menulist]").each(function() {
     $(this).children("li").each(function() {
       if ($(this).children("[data-h2-menulist]").length > 0) {
         if ($(this).children("[role='menuitem']")) {
@@ -616,40 +616,40 @@ function test6() {
   // Add right arrow event listener to main menu items with submenus.
   $(mainMenuItemsWithSubmenu).on("keydown.rightArrow", function(e) {
     var key = e.keyCode || e.which;
-    h2ComMenRightTrigger(e, key, this, mainMenuItemsWithSubmenu);
+    h2ComMenRightTrigger0010(e, key, this, mainMenuItemsWithSubmenu);
   });
 }
 
-function test7() {
+function test70010() {
   // Submenu trigger click.
-  $("[data-h2-menu-wrapper] [data-h2-submenu-trigger]").on("click.toggleSubmenu", function() {
-    h2ComMenToggleSubmenu(this);
+  $("[data-h2-menu-wrapper-0010] [data-h2-submenu-trigger]").on("click.toggleSubmenu", function() {
+    h2ComMenToggleSubmenu0010(this);
   });
 }
 
-function test8() {
+function test80010() {
   // Mobile Menu Trigger
-  $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").on("click.toggleMobileMenu", function(e) {
+  $("[data-h2-menu-wrapper-0010] [data-h2-mobile-menu-trigger]").on("click.toggleMobileMenu", function(e) {
     e.preventDefault();
-    h2ComMenMobileMenuToggle(this);
+    h2ComMenMobileMenuToggle0010(this);
   });
 }
 
-function test9() {
+function test90010() {
   // Mobile page anchor trigger.
-  $("[data-h2-menu-wrapper] [data-h2-menu] [role='menuitem']").on("click.navigate", function() {
-    h2ComMenMobileMenuAnchorClick(this);
+  $("[data-h2-menu-wrapper-0010] [data-h2-menu] [role='menuitem']").on("click.navigate", function() {
+    h2ComMenMobileMenuAnchorClick0010(this);
   });
 }
 
 // Page Load
 $(document).ready(function () {
-  test2();
-  test4();
-  test6();
-  test7();
-  test8();
-  test9();
+  test20010();
+  test40010();
+  test60010();
+  test70010();
+  test80010();
+  test90010();
 });
 
-export {test2, test4, test6, test7, test8, test9};
+export {test20010, test40010, test60010, test70010, test80010, test90010};
