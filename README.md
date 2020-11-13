@@ -16,7 +16,7 @@ For standard usage, please see [Hydrogen's documentation](https://hydrogen.desig
 
 ## Contributing
 
-Hydrogen's components are built using [Gulp](https://gulpjs.com/), [Sass](https://sass-lang.com), [Autoprefixer](https://github.com/postcss/autoprefixer), and [CSSnano](https://cssnano.co/).
+Hydrogen's properties are built using [Gulp](https://gulpjs.com/), [Sass](https://sass-lang.com), [Autoprefixer](https://github.com/postcss/autoprefixer), [CSSnano](https://cssnano.co/), and [Babel](https://babeljs.io/).
 
 Hydrogen's menu requires [Cash](https://kenwheeler.github.io/cash/) to work properly. Cash is a lightweight jQuery alternative and will eventually be phased out of Hydrogen in favour of vanilla JavaScript.
 

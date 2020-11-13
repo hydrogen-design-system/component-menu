@@ -90,19 +90,19 @@
   margin: 0;
 }
 [data-h2-menu-wrapper-0010] [data-h2-menu] h1 {
-  font-size: calc(calc(calc(calc(calc(1rem*(1.333))*(1.333))*(1.333))*(1.333))*(1.333));
+  font-size: calc(calc(calc(calc(calc(1rem*1.333)*1.333)*1.333)*1.333)*1.333);
 }
 [data-h2-menu-wrapper-0010] [data-h2-menu] h2 {
-  font-size: calc(calc(calc(calc(1rem*(1.333))*(1.333))*(1.333))*(1.333));
+  font-size: calc(calc(calc(calc(1rem*1.333)*1.333)*1.333)*1.333);
 }
 [data-h2-menu-wrapper-0010] [data-h2-menu] h3 {
-  font-size: calc(calc(calc(1rem*(1.333))*(1.333))*(1.333));
+  font-size: calc(calc(calc(1rem*1.333)*1.333)*1.333);
 }
 [data-h2-menu-wrapper-0010] [data-h2-menu] h4 {
-  font-size: calc(calc(1rem*(1.333))*(1.333));
+  font-size: calc(calc(1rem*1.333)*1.333);
 }
 [data-h2-menu-wrapper-0010] [data-h2-menu] h5 {
-  font-size: calc(1rem*(1.333));
+  font-size: calc(1rem*1.333);
 }
 [data-h2-menu-wrapper-0010] [data-h2-menu] h6 {
   font-size: 1rem;
@@ -149,7 +149,8 @@
 [data-h2-menu-wrapper-0010] [data-h2-menu] ul,
 [data-h2-menu-wrapper-0010] [data-h2-menu] ol {
   font-family: sans-serif;
-  padding-left: calc(1.5rem * 2);
+  margin: 0;
+  padding-left: 1.5rem;
 }
 [data-h2-menu-wrapper-0010] [data-h2-menu] ul li,
 [data-h2-menu-wrapper-0010] [data-h2-menu] ol li {
