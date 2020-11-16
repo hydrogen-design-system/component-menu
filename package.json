@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-design-system/component-menu",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "component": "menu",
   "description": "Hydrogen's menu component.",
   "keywords": [
@@ -31,7 +31,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
-    "@hydrogen-design-system/core": "0.0.37",
+    "@hydrogen-design-system/core": "0.0.38",
     "autoprefixer": "^9.7.3",
     "browser-sync": "^2.26.13",
     "browserify": "^17.0.0",
