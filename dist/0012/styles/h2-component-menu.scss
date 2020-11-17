@@ -30,8 +30,8 @@
 }
 
 // Load the core and component mixins within the versioned component attribute, while passing them their respective theme variables.
-// -0011 is replaced during the Gulp build script with the current component version, set in Gulpfile.js, before Sass is compiled.
-[data-h2-menu-wrapper-0011] {
+// -0012 is replaced during the Gulp build script with the current component version, set in Gulpfile.js, before Sass is compiled.
+[data-h2-menu-wrapper-0012] {
   // Menu Trigger
   [data-h2-mobile-menu-trigger] {
     @include h2-component-menu-trigger(
@@ -90,7 +90,7 @@
 }
 
 // Top Style Menus
-[data-h2-menu-wrapper-0011*="top"] {
+[data-h2-menu-wrapper-0012*="top"] {
   [data-h2-menu] {
     @include h2-component-menu-topbar(
       $mq-medium: var.$mq-medium,
@@ -99,28 +99,28 @@
     );
   }
 }
-[data-h2-menu-wrapper-0011*="top"][data-h2-menu-wrapper-0011*="sticky"] {
+[data-h2-menu-wrapper-0012*="top"][data-h2-menu-wrapper-0012*="sticky"] {
   [data-h2-menu] {
     @include h2-component-menu-topbar-sticky (
       $mq-medium: var.$mq-medium
     );
   }
 }
-[data-h2-menu-wrapper-0011*="top"][data-h2-menu-wrapper-0011*="center"] {
+[data-h2-menu-wrapper-0012*="top"][data-h2-menu-wrapper-0012*="center"] {
   [data-h2-menu] {
     @include h2-component-menu-topbar-center (
       $mq-medium: var.$mq-medium
     );
   }
 }
-[data-h2-menu-wrapper-0011*="top"][data-h2-menu-wrapper-0011*="right"] {
+[data-h2-menu-wrapper-0012*="top"][data-h2-menu-wrapper-0012*="right"] {
   [data-h2-menu] {
     @include h2-component-menu-topbar-right (
       $mq-medium: var.$mq-medium
     );
   }
 }
-[data-h2-menu-wrapper-0011*="top"][data-h2-menu-wrapper-0011*="split"] {
+[data-h2-menu-wrapper-0012*="top"][data-h2-menu-wrapper-0012*="split"] {
   [data-h2-menu] {
     @include h2-component-menu-topbar-split (
       $mq-medium: var.$mq-medium
@@ -129,7 +129,7 @@
 }
 
 // Sidebar Style Menus
-[data-h2-menu-wrapper-0011*="side"] {
+[data-h2-menu-wrapper-0012*="side"] {
   [data-h2-menu] {
     @include h2-component-menu-sidebar (
       $mq-medium: var.$mq-medium,
@@ -145,7 +145,7 @@
     }
   }
 }
-[data-h2-menu-wrapper-0011*="side"][data-h2-menu-wrapper-0011*="right"] {
+[data-h2-menu-wrapper-0012*="side"][data-h2-menu-wrapper-0012*="right"] {
   [data-h2-menu] {
     @include h2-component-menu-sidebar-right (
       $mq-medium: var.$mq-medium,

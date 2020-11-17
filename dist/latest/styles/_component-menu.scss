@@ -1,5 +1,7 @@
 // Hydrogen / Component / Styles
 
+@use "sass:color";
+
 // This reset mixin is used to specify component level style resets if they're needed. These styles only apply to the versioned instance of the component.
 @mixin h2-component-menu-reset() {}
 
@@ -72,7 +74,12 @@
   $medium,
   $padding
 ) {
-  background: $main-menu-background-color;
+  @if color.alpha($main-menu-background-color) == 1 {
+    background: $main-menu-background-color;
+  }
+  @else {
+    background: rgba(color.red($main-menu-background-color),color.green($main-menu-background-color), color.blue($main-menu-background-color), 1);
+  }
   display: none;
   height: 100vh;
   overflow: auto;
@@ -81,6 +88,10 @@
   left: 0;
   width: 100vw;
   z-index: 1000000;
+
+  @media #{$medium} {
+    background: $main-menu-background-color;
+  }
 
   // Don't forget that these menu styles are mobile first, so when modifying menu styles, always begin from a mobile view.
 
@@ -104,7 +115,7 @@
 
   // Set main menu styles, along with nested children generic styles.
   >[data-h2-menulist] {
-    background: $main-menu-background-color;
+    // background: $main-menu-background-color;
     width: 100%;
 
     &:last-child {

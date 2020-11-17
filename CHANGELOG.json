@@ -25,6 +25,12 @@
                 "Reconfigures the build script to output into a new folder layout containing the version and latest code in matching structures.",
                 "Removes the init script as it's no longer needed."
               ]
+            },
+            {
+              "release": 12,
+              "changes": [
+                "Fixes a bug where setting the menu background theme variable to a semi-transparent value would break the styling and ruin the mobile experience; updates the Sass so that the menu respects the RGB value on mobile, but sets the alpha value to 1, while respecting the user value on desktop."
+              ]
             }
           ]
         }
