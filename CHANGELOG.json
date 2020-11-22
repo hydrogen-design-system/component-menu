@@ -31,6 +31,14 @@
               "changes": [
                 "Fixes a bug where setting the menu background theme variable to a semi-transparent value would break the styling and ruin the mobile experience; updates the Sass so that the menu respects the RGB value on mobile, but sets the alpha value to 1, while respecting the user value on desktop."
               ]
+            },
+            {
+              "release": 13,
+              "date": "2020/NOV/22",
+              "changes": [
+                "Updates the H2 core from 0.0.38 => 0.0.40.",
+                "Reworks and simplifies the development and build scripts to output both a module and instanced version of component scripts."
+              ]
             }
           ]
         }
