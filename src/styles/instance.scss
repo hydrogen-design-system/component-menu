@@ -18,7 +18,7 @@
 // Load the core itself so that its mixins can be accessed and subsequently nested inside the component attribute (this prevents the core from being loaded on the project outside of places it should be).
 @use "core/styles/core" as core;
 
-// // Load the component so that its mixins can be accessed.
+// Load the component so that its mixins can be accessed.
 @use "menu" as *;
 
 // Mobile Menu Body Lock Class

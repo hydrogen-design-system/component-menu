@@ -39,6 +39,15 @@
                 "Updates the H2 core from 0.0.38 => 0.0.40.",
                 "Reworks and simplifies the development and build scripts to output both a module and instanced version of component scripts."
               ]
+            },
+            {
+              "release": 14,
+              "date": "2020/NOV/25",
+              "changes": [
+                "Updates the H2 core from 0.0.40 => 0.0.41.",
+                "Removed the deprecated system.scss file.",
+                "Fixes a bug where the menu JavaScript would fail when the system variable was declared."
+              ]
             }
           ]
         }

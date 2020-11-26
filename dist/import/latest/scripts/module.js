@@ -574,17 +574,35 @@ function h2ComMenAddUpDownToMainMenuItems(system) {
         }
       });
     });
-  } else {
+  } 
+  else {
     $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
-      if ($(this).closest("[data-h2-system]").attr("data-h2-system" == system)){
-        $(this).children("li").each(function() {
-          if ($(this).children("[role='menuitem']")) {
-            mainMenuItems = $(mainMenuItems).add($(this).children("[role='menuitem']"));
-          }
-          if ($(this).children("[data-h2-submenu-trigger]")) {
-            mainMenuItems = $(mainMenuItems).add($(this).children("[data-h2-submenu-trigger]"));
-          }
-        });
+      // Check if the menu wrapper has the system attribute.
+      if ($(this).closest("[data-h2-menu-wrapper]").h2ComMenHasAttr("data-h2-system")) {
+        // Check if the system attribute matches the current system version.
+        if ($(this).closest("[data-h2-menu-wrapper]").attr("data-h2-system") == system){
+          $(this).children("li").each(function() {
+            if ($(this).children("[role='menuitem']")) {
+              mainMenuItems = $(mainMenuItems).add($(this).children("[role='menuitem']"));
+            }
+            if ($(this).children("[data-h2-submenu-trigger]")) {
+              mainMenuItems = $(mainMenuItems).add($(this).children("[data-h2-submenu-trigger]"));
+            }
+          });
+        }
+      } 
+      else {
+        // Since the menu wrapper doesn't have the system attribute, find the closest element that does and check to see if its value matches the current system version.
+        if ($(this).closest("[data-h2-system]").attr("data-h2-system") == system) {
+          $(this).children("li").each(function() {
+            if ($(this).children("[role='menuitem']")) {
+              mainMenuItems = $(mainMenuItems).add($(this).children("[role='menuitem']"));
+            }
+            if ($(this).children("[data-h2-submenu-trigger]")) {
+              mainMenuItems = $(mainMenuItems).add($(this).children("[data-h2-submenu-trigger]"));
+            }
+          });
+        }
       }
     });
   }
@@ -612,16 +630,37 @@ function h2ComMenAddTabEvents(system) {
         allMenuItems = $(allMenuItems).add($(this).children("[data-h2-submenu-trigger]"));
       }
     });
-  } else {
+  } 
+  else {
     $("[data-h2-menu-wrapper] [data-h2-menu] [data-h2-menulist]").children("li").each(function() {
-      if ($(this).closest("[data-h2-system]").attr("data-h2-system" == system)){
-        if ($(this).children("[role='menuitem']")) {
-          allMenuItems = $(allMenuItems).add($(this).children("[role='menuitem']"));
+      // Check if the menu wrapper has the system attribute.
+      if ($(this).closest("[data-h2-menu-wrapper]").h2ComMenHasAttr("data-h2-system")) {
+        // Check if the system attribute matches the current system version.
+        if ($(this).closest("[data-h2-menu-wrapper]").attr("data-h2-system") == system) {
+
+          if ($(this).children("[role='menuitem']")) {
+            allMenuItems = $(allMenuItems).add($(this).children("[role='menuitem']"));
+          }
+          if ($(this).children("[data-h2-submenu-trigger]")) {
+            allMenuItems = $(allMenuItems).add($(this).children("[data-h2-submenu-trigger]"));
+          }
+
         }
-        if ($(this).children("[data-h2-submenu-trigger]")) {
-          allMenuItems = $(allMenuItems).add($(this).children("[data-h2-submenu-trigger]"));
+      } 
+      else {
+        // Since the menu wrapper doesn't have the system attribute, find the closest element that does and check to see if its value matches the current system version.
+        if ($(this).closest("[data-h2-system]").attr("data-h2-system") == system) {
+
+          if ($(this).children("[role='menuitem']")) {
+            allMenuItems = $(allMenuItems).add($(this).children("[role='menuitem']"));
+          }
+          if ($(this).children("[data-h2-submenu-trigger]")) {
+            allMenuItems = $(allMenuItems).add($(this).children("[data-h2-submenu-trigger]"));
+          }
+          
         }
       }
+
     });
   }
 
@@ -649,20 +688,45 @@ function h2ComMenAddRightArrowToMainMenuItemsWithSubmenus(system) {
         }
       });
     });
-  } else {
+  } 
+  else {
     $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
-      if ($(this).closest("[data-h2-system]").attr("data-h2-system" == system)){
-        $(this).children("li").each(function() {
-          if ($(this).children("[data-h2-menulist]").length > 0) {
-            if ($(this).children("[role='menuitem']")) {
-              mainMenuItemsWithSubmenu = $(mainMenuItemsWithSubmenu).add($(this).children("[role='menuitem']"));
+      // Check if the menu wrapper has the system attribute.
+      if ($(this).closest("[data-h2-menu-wrapper]").h2ComMenHasAttr("data-h2-system")) {
+        // Check if the system attribute matches the current system version.
+        if ($(this).closest("[data-h2-menu-wrapper]").attr("data-h2-system") == system) {
+
+          $(this).children("li").each(function() {
+            if ($(this).children("[data-h2-menulist]").length > 0) {
+              if ($(this).children("[role='menuitem']")) {
+                mainMenuItemsWithSubmenu = $(mainMenuItemsWithSubmenu).add($(this).children("[role='menuitem']"));
+              }
+              if ($(this).children("[data-h2-submenu-trigger]")) {
+                mainMenuItemsWithSubmenu = $(mainMenuItemsWithSubmenu).add($(this).children("[data-h2-submenu-trigger]"));
+              }
             }
-            if ($(this).children("[data-h2-submenu-trigger]")) {
-              mainMenuItemsWithSubmenu = $(mainMenuItemsWithSubmenu).add($(this).children("[data-h2-submenu-trigger]"));
+          });
+
+        }
+      } 
+      else {
+        // Since the menu wrapper doesn't have the system attribute, find the closest element that does and check to see if its value matches the current system version.
+        if ($(this).closest("[data-h2-system]").attr("data-h2-system") == system) {
+
+          $(this).children("li").each(function() {
+            if ($(this).children("[data-h2-menulist]").length > 0) {
+              if ($(this).children("[role='menuitem']")) {
+                mainMenuItemsWithSubmenu = $(mainMenuItemsWithSubmenu).add($(this).children("[role='menuitem']"));
+              }
+              if ($(this).children("[data-h2-submenu-trigger]")) {
+                mainMenuItemsWithSubmenu = $(mainMenuItemsWithSubmenu).add($(this).children("[data-h2-submenu-trigger]"));
+              }
             }
-          }
-        });
+          });
+          
+        }
       }
+
     });
   }
 
@@ -676,15 +740,31 @@ function h2ComMenAddRightArrowToMainMenuItemsWithSubmenus(system) {
 
 function h2ComMenAddSubmenuTriggerEvents(system) {
 
-  // Determine where the module is being loaded from. If the module is being loaded from the system, the event should only be applied to the component when it exists within
-  var submenuTriggers;
+  // Determine where the module is being loaded from. If the module is being loaded from the system, the event should only be applied to the component when it exists within the system's enabler selector (data-h2-system). This check ensures that any code that is loaded by the system is instanced and can be overridden by previous versions if need be.
+  var submenuTriggers = [];
   if (system == null || system == "") {
     submenuTriggers = $("[data-h2-menu-wrapper] [data-h2-submenu-trigger]");
-  } else {
+  } 
+  else {
     $("[data-h2-menu-wrapper] [data-h2-submenu-trigger]").each(function() {
-      if ($(this).closest("[data-h2-system]").attr("data-h2-system") == system) {
-        submenuTriggers.add($(this));
+      // Check if the menu wrapper has the system attribute.
+      if ($(this).closest("[data-h2-menu-wrapper]").h2ComMenHasAttr("data-h2-system")) {
+        // Check if the system attribute matches the current system version.
+        if ($(this).closest("[data-h2-menu-wrapper]").attr("data-h2-system") == system) {
+
+          submenuTriggers = $(submenuTriggers).add($(this));
+
+        }
+      } 
+      else {
+        // Since the menu wrapper doesn't have the system attribute, find the closest element that does and check to see if its value matches the current system version.
+        if ($(this).closest("[data-h2-system]").attr("data-h2-system") == system) {
+
+          submenuTriggers = $(submenuTriggers).add($(this));
+          
+        }
       }
+
     });
   }
 
@@ -697,14 +777,28 @@ function h2ComMenAddSubmenuTriggerEvents(system) {
 
 function h2ComMenAddMobileMenuTriggerEvent(system) {
 
-  // Determine where the module is being loaded from. If the module is being loaded from the system, the event should only be applied to the component when it exists within
-  var mobileTriggers;
+  // Determine where the module is being loaded from. If the module is being loaded from the system, the event should only be applied to the component when it exists within the system's enabler selector (data-h2-system). This check ensures that any code that is loaded by the system is instanced and can be overridden by previous versions if need be.
+  var mobileTriggers = [];
   if (system == null || system == "") {
     mobileTriggers = $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]");
   } else {
     $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").each(function() {
-      if ($(this).closest("[data-h2-system]").attr("data-h2-system") == system) {
-        mobileTriggers.add($(this));
+      // Check if the menu wrapper has the system attribute.
+      if ($(this).closest("[data-h2-menu-wrapper]").h2ComMenHasAttr("data-h2-system")) {
+        // Check if the system attribute matches the current system version.
+        if ($(this).closest("[data-h2-menu-wrapper]").attr("data-h2-system") == system) {
+
+          mobileTriggers = $(mobileTriggers).add($(this));
+
+        }
+      } 
+      else {
+        // Since the menu wrapper doesn't have the system attribute, find the closest element that does and check to see if its value matches the current system version.
+        if ($(this).closest("[data-h2-system]").attr("data-h2-system") == system) {
+
+          mobileTriggers = $(mobileTriggers).add($(this));
+          
+        }
       }
     });
   }
@@ -719,18 +813,32 @@ function h2ComMenAddMobileMenuTriggerEvent(system) {
 
 function h2ComMenAddPageAnchorEvents(system) {
 
-  // Determine where the module is being loaded from. If the module is being loaded from the system, the event should only be applied to the component when it exists within
-  var menuItems;
+  // Determine where the module is being loaded from. If the module is being loaded from the system, the event should only be applied to the component when it exists within the system's enabler selector (data-h2-system). This check ensures that any code that is loaded by the system is instanced and can be overridden by previous versions if need be.
+  var menuItems = [];
   if (system == null || system == "") {
     menuItems = $("[data-h2-menu-wrapper] [data-h2-menu] [role='menuitem']");
   } else {
     $("[data-h2-menu-wrapper] [data-h2-menu] [role='menuitem']").each(function() {
-      if ($(this).closest("[data-h2-system]").attr("data-h2-system") == system) {
-        menuItems.add($(this));
+      // Check if the menu wrapper has the system attribute.
+      if ($(this).closest("[data-h2-menu-wrapper]").h2ComMenHasAttr("data-h2-system")) {
+        // Check if the system attribute matches the current system version.
+        if ($(this).closest("[data-h2-menu-wrapper]").attr("data-h2-system") == system) {
+
+          menuItems = $(menuItems).add($(this));
+
+        }
+      } 
+      else {
+        // Since the menu wrapper doesn't have the system attribute, find the closest element that does and check to see if its value matches the current system version.
+        if ($(this).closest("[data-h2-system]").attr("data-h2-system") == system) {
+
+          menuItems = $(menuItems).add($(this));
+          
+        }
       }
+
     });
   }
-
   // Mobile page anchor trigger.
   $(menuItems).on("click.navigate", function() {
     h2ComMenMobileMenuAnchorClick(this);
