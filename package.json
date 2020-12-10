@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-design-system/component-menu",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "component": "menu",
   "description": "Hydrogen's menu component.",
   "keywords": [
@@ -29,13 +29,13 @@
     "cash-dom": "^8.1.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.12.1",
-    "@hydrogen-design-system/core": "0.0.41",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "@hydrogen-design-system/core": "0.0.42",
     "autoprefixer": "^9.7.3",
     "browser-sync": "^2.26.13",
     "browserify": "^17.0.0",
-    "browserslist": "^4.14.5",
+    "browserslist": "^4.16.0",
     "cssnano": "^4.1.10",
     "del": "^3.0.0",
     "gulp": "^4.0.2",
@@ -47,7 +47,7 @@
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify": "^3.0.1",
-    "sass": "^1.27.0",
+    "sass": "^1.30.0",
     "vinyl-source-stream": "^2.0.0",
     "yargs": "^15.4.0"
   },

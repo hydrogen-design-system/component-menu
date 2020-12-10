@@ -48,6 +48,16 @@
                 "Removed the deprecated system.scss file.",
                 "Fixes a bug where the menu JavaScript would fail when the system variable was declared."
               ]
+            },
+            {
+              "release": 15,
+              "date": "2020/DEC/10",
+              "changes": [
+                "Updates the H2 core from 0.0.41 => 0.0.42.",
+                "Fixed an old $H2VER reference in the output markup.",
+                "Fixed a bug where there were inconsistent units for defining sidebar width when next to content that caused minor overlap.",
+                "Fixed an accessibility bug where when a sidebar menu included a link to content on the current page, the submenu would collapse. This has been changed so that the subemenu remains open for visible hierarchy retention, but also includes fixes so that the menu can be navigated if the user tabs back to it."
+              ]
             }
           ]
         }
