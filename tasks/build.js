@@ -220,7 +220,7 @@ const dataH2ComponentVersion = "data-h2-" + component + "-wrapper-" + version;
       function moveCompiledLatestInstanceScript() {
         return src("src/scripts/instance.js")
         .pipe(replace(dataH2ComponentDefault, dataH2Component))
-        .pipe(replace("_VERSION", ""))
+        .pipe(replace("_VERSION", "latest"))
         .pipe(babel({
           presets: ['@babel/env']
         }))

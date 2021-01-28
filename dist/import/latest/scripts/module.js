@@ -64,7 +64,7 @@ $.fn.h2ComMenHasAttr = function (name) {
     // Find parent menu and its items.
     var parentMenuItems = [];
     // Check to see if the main menu is the parent, and whether it is split.
-    if ($(menuItem).parent().parent().parent().h2ComMenHasAttr("data-h2-menu") == true) {
+    if ($(menuItem).parent().parent().parent().h2ComMenHasAttr("data-h2-menu-container") == true) {
       $(menuItem).parent().parent().parent().children("[data-h2-menulist]").each(function() {
         $(this).children("li").each(function() {
           if ($(this).children("[role='menuitem']")) {
@@ -215,7 +215,7 @@ function h2ComMenEscapeTrigger(e, key, trigger) {
     if (trigger.getAttribute('role') === 'menuitem') {
       // console.log("You exited on a menu item.");
       // Check to see if you're trying to close the main menu.
-      if ($(trigger).parent().parent().parent().h2ComMenHasAttr("data-h2-menu")) {
+      if ($(trigger).parent().parent().parent().h2ComMenHasAttr("data-h2-menu-container")) {
         // console.log("You're trying to close the main menu.");
         if ($("[data-h2-menu-wrapper] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
           var menu = $("[data-h2-menu-wrapper] [data-h2-menu]");
@@ -262,7 +262,7 @@ function h2ComMenEscapeTrigger(e, key, trigger) {
       else {
         // console.log("This trigger is a trigger inside the open submenu.");
         // Check to see if you're trying to close the main menu.
-        if ($(trigger).parent().parent().parent().h2ComMenHasAttr("data-h2-menu")) {
+        if ($(trigger).parent().parent().parent().h2ComMenHasAttr("data-h2-menu-container")) {
           // console.log("You're trying to close the main menu.");
           if ($("[data-h2-menu-wrapper] [data-h2-menu]").hasClass("h2-mobile-menu-active")) {
             var menu = $("[data-h2-menu-wrapper] [data-h2-menu]");
@@ -317,7 +317,7 @@ function h2ComMenMainTabExit(e, key, trigger) {
     $(trigger).closest("[data-h2-menu]").find("[data-h2-submenu-trigger]").attr("aria-expanded", "false");
     // Get main menu items
     var resetMainMenuItems = [];
-    $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
+    $("[data-h2-menu-wrapper] [data-h2-menu] [data-h2-menu-container] >[data-h2-menulist]").each(function() {
       $(this).children("li").each(function() {
         if ($(this).children("[role='menuitem']")) {
           resetMainMenuItems = $(resetMainMenuItems).add($(this).children("[role='menuitem']"));
@@ -348,7 +348,7 @@ function h2ComMenMainTabExit(e, key, trigger) {
     // Create an index of the main menu items, including the mobile trigger (this should be first in the order).
     var menuItemIndex = [];
     menuItemIndex = $(menuItemIndex).add($("[data-h2-menu-wrapper]").find(" [data-h2-mobile-menu-trigger]"));
-    $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
+    $("[data-h2-menu-wrapper] [data-h2-menu] [data-h2-menu-container] >[data-h2-menulist]").each(function() {
       $(this).children("li").each(function() {
         if ($(this).children("[role='menuitem']")) {
           menuItemIndex = $(menuItemIndex).add($(this).children("[role='menuitem']"));
@@ -459,7 +459,7 @@ function h2ComMenMobileMenuToggle(trigger) {
     $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").off("keydown.mainTabExit");
     // Get main menu items.
     var resetMainMenuItems = [];
-    $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
+    $("[data-h2-menu-wrapper] [data-h2-menu] [data-h2-menu-container] >[data-h2-menulist]").each(function() {
       $(this).children("li").each(function() {
         if ($(this).children("[role='menuitem']")) {
           resetMainMenuItems = $(resetMainMenuItems).add($(this).children("[role='menuitem']"));
@@ -487,7 +487,7 @@ function h2ComMenMobileMenuToggle(trigger) {
     });
     // Get main menu items with submenus.
     var resetMainMenuItemsWithSubmenus = [];
-    $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
+    $("[data-h2-menu-wrapper] [data-h2-menu] [data-h2-menu-container] >[data-h2-menulist]").each(function() {
       $(this).children("li").each(function() {
         if ($(this).children("[data-h2-menulist]").length > 0) {
           if ($(this).children("[role='menuitem']")) {
@@ -630,8 +630,8 @@ function h2ComMenAddUpDownToMainMenuItems(system) {
 
   // Determine where the module is being loaded from. If the module is being loaded from the system, the event should only be applied to the component when it exists within the system's enabler selector (data-h2-system). This check ensures that any code that is loaded by the system is instanced and can be overridden by previous versions if need be.
   var mainMenuItems = [];
-  if (system == null || system == "") {
-    $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
+  if (system == null || system == "" || system == "latest") {
+    $("[data-h2-menu-wrapper] [data-h2-menu] [data-h2-menu-container] >[data-h2-menulist]").each(function() {
       $(this).children("li").each(function() {
         if ($(this).children("[role='menuitem']")) {
           mainMenuItems = $(mainMenuItems).add($(this).children("[role='menuitem']"));
@@ -643,7 +643,7 @@ function h2ComMenAddUpDownToMainMenuItems(system) {
     });
   } 
   else {
-    $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
+    $("[data-h2-menu-wrapper] [data-h2-menu] [data-h2-menu-container] >[data-h2-menulist]").each(function() {
       // Check if the menu wrapper has the system attribute.
       if ($(this).closest("[data-h2-menu-wrapper]").h2ComMenHasAttr("data-h2-system")) {
         // Check if the system attribute matches the current system version.
@@ -687,7 +687,7 @@ function h2ComMenAddTabEvents(system) {
 
   // Determine where the module is being loaded from. If the module is being loaded from the system, the event should only be applied to the component when it exists within the system's enabler selector (data-h2-system). This check ensures that any code that is loaded by the system is instanced and can be overridden by previous versions if need be.
   var allMenuItems = [];
-  if (system == null || system == "") {
+  if (system == null || system == "" || system == "latest") {
     $("[data-h2-menu-wrapper] [data-h2-menu] [data-h2-menulist]").children("li").each(function() {
       if ($(this).children("[role='menuitem']")) {
         allMenuItems = $(allMenuItems).add($(this).children("[role='menuitem']"));
@@ -741,8 +741,8 @@ function h2ComMenAddRightArrowToMainMenuItemsWithSubmenus(system) {
 
   // Determine where the module is being loaded from. If the module is being loaded from the system, the event should only be applied to the component when it exists within the system's enabler selector (data-h2-system). This check ensures that any code that is loaded by the system is instanced and can be overridden by previous versions if need be.
   var mainMenuItemsWithSubmenu = [];
-  if (system == null || system == "") {
-    $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
+  if (system == null || system == "" || system == "latest") {
+    $("[data-h2-menu-wrapper] [data-h2-menu] [data-h2-menu-container] >[data-h2-menulist]").each(function() {
       $(this).children("li").each(function() {
         if ($(this).children("[data-h2-menulist]").length > 0) {
           if ($(this).children("[role='menuitem']")) {
@@ -756,7 +756,7 @@ function h2ComMenAddRightArrowToMainMenuItemsWithSubmenus(system) {
     });
   } 
   else {
-    $("[data-h2-menu-wrapper] [data-h2-menu] >[data-h2-menulist]").each(function() {
+    $("[data-h2-menu-wrapper] [data-h2-menu] [data-h2-menu-container] >[data-h2-menulist]").each(function() {
       // Check if the menu wrapper has the system attribute.
       if ($(this).closest("[data-h2-menu-wrapper]").h2ComMenHasAttr("data-h2-system")) {
         // Check if the system attribute matches the current system version.
@@ -808,7 +808,7 @@ function h2ComMenAddSubmenuTriggerEvents(system) {
 
   // Determine where the module is being loaded from. If the module is being loaded from the system, the event should only be applied to the component when it exists within the system's enabler selector (data-h2-system). This check ensures that any code that is loaded by the system is instanced and can be overridden by previous versions if need be.
   var submenuTriggers = [];
-  if (system == null || system == "") {
+  if (system == null || system == "" || system == "latest") {
     submenuTriggers = $("[data-h2-menu-wrapper] [data-h2-submenu-trigger]");
   } 
   else {
@@ -845,7 +845,7 @@ function h2ComMenAddMobileMenuTriggerEvent(system) {
 
   // Determine where the module is being loaded from. If the module is being loaded from the system, the event should only be applied to the component when it exists within the system's enabler selector (data-h2-system). This check ensures that any code that is loaded by the system is instanced and can be overridden by previous versions if need be.
   var mobileTriggers = [];
-  if (system == null || system == "") {
+  if (system == null || system == "" || system == "latest") {
     mobileTriggers = $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]");
   } else {
     $("[data-h2-menu-wrapper] [data-h2-mobile-menu-trigger]").each(function() {
@@ -881,7 +881,7 @@ function h2ComMenAddPageAnchorEvents(system) {
 
   // Determine where the module is being loaded from. If the module is being loaded from the system, the event should only be applied to the component when it exists within the system's enabler selector (data-h2-system). This check ensures that any code that is loaded by the system is instanced and can be overridden by previous versions if need be.
   var menuItems = [];
-  if (system == null || system == "") {
+  if (system == null || system == "" || system == "latest") {
     menuItems = $("[data-h2-menu-wrapper] [data-h2-menu] [role='menuitem']");
   } else {
     $("[data-h2-menu-wrapper] [data-h2-menu] [role='menuitem']").each(function() {

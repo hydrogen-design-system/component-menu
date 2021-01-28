@@ -58,6 +58,16 @@
                 "Fixed a bug where there were inconsistent units for defining sidebar width when next to content that caused minor overlap.",
                 "Fixed an accessibility bug where when a sidebar menu included a link to content on the current page, the submenu would collapse. This has been changed so that the subemenu remains open for visible hierarchy retention, but also includes fixes so that the menu can be navigated if the user tabs back to it."
               ]
+            },
+            {
+              "release": 16,
+              "date": "2021/JAN/28",
+              "changes": [
+                "Breaking: Adds a new container wrapper around menulist items.",
+                "Adds support for a container size argument in topbar style menus.",
+                "Adds support for specifying left/right padding via argument on sidebar style menus.",
+                "Fixes a bug where the menu scripts didn't handle updates to the script formats of other components - this will be changed again when the menu component is migrated to vanilla JavaScript."
+              ]
             }
           ]
         }

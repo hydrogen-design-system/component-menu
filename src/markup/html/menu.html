@@ -1,4 +1,4 @@
-<div data-h2-menu-wrapper_VERSION="top(sticky, center)">
+<div data-h2-menu-wrapper_VERSION="top(center, sticky)">
   <button 
     aria-expanded="false"
     aria-label="Use the enter key to open or close the main menu."
@@ -10,132 +10,134 @@
   <nav 
     aria-label="Use the enter key to select a menu item and travel to its page. Use the left and right arrow keys to navigate between menu and submenu items. Use the right arrow key to open submenus when they are available. Use the left arrow or escape keys to close a menu."
     data-h2-menu>
-    <ul 
-      data-h2-menulist
-      role="menu">
-      <li role="presentation">
-        <a 
-          href="" 
-          role="menuitem" 
-          title="">Menu Item 01</a>
-      </li>
-      <li role="presentation">
-        <a 
-          href="" 
-          role="menuitem" 
-          title="">Menu Item 02</a>
-      </li>
-      <li role="presentation">
-        <a 
-          href="" 
-          role="menuitem" 
-          title="">Menu Item 03</a>
-      </li>
-      <li role="presentation">
-        <a 
-          href="" 
-          role="menuitem" 
-          title="">Menu Item 04</a>
-      </li>
-      <li role="presentation">
-        <a 
-          aria-expanded="false"
-          aria-haspopup="true"
-          href="" 
-          role="menuitem" 
-          title="">
-          Menu Item 05</a>
-        <button 
-          aria-expanded="false"
-          data-h2-submenu-trigger>
-          <span data-h2-submenu-trigger-accessibility-text>Open or close Menu Item 05's submenu.</span>
-          <span 
-            aria-hidden="true"
-            data-h2-submenu-trigger-add-icon>+</span>
-          <span 
-            aria-hidden="true"
-            data-h2-submenu-trigger-remove-icon>-</span>
-        </button>
-        <ul 
-          data-h2-menulist
-          role="menu">
-          <li role="presentation">
-            <a 
-              href="#here" 
-              role="menuitem" 
-              tabindex="-1" 
-              title="">Sub1menu Item 01 (anchor)</a>
-          </li>
-          <li role="presentation">
-            <a 
-              href="" 
-              role="menuitem" 
-              tabindex="-1" 
-              title="">Sub1menu Item 02</a>
-          </li>
-          <li role="presentation">
-            <a 
-              aria-expanded="false"
-              aria-haspopup="true"
-              href="" 
-              role="menuitem" 
-              tabindex="-1" 
-              title="">
-              Sub1menu Item 03</a>
-            <button 
-              aria-expanded="false"
-              data-h2-submenu-trigger
-              tabindex="-1"           >
-              <span data-h2-submenu-trigger-accessibility-text>Open or close Sub1menu Item 03's submenu.</span>
-              <span 
-                aria-hidden="true"
-                data-h2-submenu-trigger-add-icon>+</span>
-              <span 
-                aria-hidden="true"
-                data-h2-submenu-trigger-remove-icon>-</span>
-            </button>
-            <ul 
-              data-h2-menulist
-              role="menu">
-              <li role="presentation">
-                <a 
-                  href="" 
-                  role="menuitem" 
-                  tabindex="-1" 
-                  title="">Sub2menu Item 01</a>
-              </li>
-              <li role="presentation">
-                <a 
-                  href="" 
-                  role="menuitem" 
-                  tabindex="-1" 
-                  title="">Sub2menu Item 02</a>
-              </li>
-              <li role="presentation">
-                <a 
-                  href="" 
-                  role="menuitem" 
-                  tabindex="-1" 
-                  title="">Sub2menu Item 03</a>
-              </li>
-            </ul>
-          </li>
-          <li role="presentation">
-            <a 
-              href="" 
-              role="menuitem" 
-              tabindex="-1" 
-              title="">Sub1menu Item 04</a>
-          </li>
-        </ul>
-      </li>
-      <li role="presentation">
-        <a 
-          href="" 
-          role="menuitem" 
-          title="">Menu Item 06</a>
-      </li>
-    </ul>
+    <div data-h2-menu-container>
+      <ul 
+        data-h2-menulist
+        role="menu">
+        <li role="presentation">
+          <a 
+            href="" 
+            role="menuitem" 
+            title="">Menu Item 01</a>
+        </li>
+        <li role="presentation">
+          <a 
+            href="" 
+            role="menuitem" 
+            title="">Menu Item 02</a>
+        </li>
+        <li role="presentation">
+          <a 
+            href="" 
+            role="menuitem" 
+            title="">Menu Item 03</a>
+        </li>
+        <li role="presentation">
+          <a 
+            href="" 
+            role="menuitem" 
+            title="">Menu Item 04</a>
+        </li>
+        <li role="presentation">
+          <a 
+            aria-expanded="false"
+            aria-haspopup="true"
+            href="" 
+            role="menuitem" 
+            title="">
+            Menu Item 05</a>
+          <button 
+            aria-expanded="false"
+            data-h2-submenu-trigger>
+            <span data-h2-submenu-trigger-accessibility-text>Open or close Menu Item 05's submenu.</span>
+            <span 
+              aria-hidden="true"
+              data-h2-submenu-trigger-add-icon>+</span>
+            <span 
+              aria-hidden="true"
+              data-h2-submenu-trigger-remove-icon>-</span>
+          </button>
+          <ul 
+            data-h2-menulist
+            role="menu">
+            <li role="presentation">
+              <a 
+                href="#here" 
+                role="menuitem" 
+                tabindex="-1" 
+                title="">Sub1menu Item 01 (anchor)</a>
+            </li>
+            <li role="presentation">
+              <a 
+                href="" 
+                role="menuitem" 
+                tabindex="-1" 
+                title="">Sub1menu Item 02</a>
+            </li>
+            <li role="presentation">
+              <a 
+                aria-expanded="false"
+                aria-haspopup="true"
+                href="" 
+                role="menuitem" 
+                tabindex="-1" 
+                title="">
+                Sub1menu Item 03</a>
+              <button 
+                aria-expanded="false"
+                data-h2-submenu-trigger
+                tabindex="-1"           >
+                <span data-h2-submenu-trigger-accessibility-text>Open or close Sub1menu Item 03's submenu.</span>
+                <span 
+                  aria-hidden="true"
+                  data-h2-submenu-trigger-add-icon>+</span>
+                <span 
+                  aria-hidden="true"
+                  data-h2-submenu-trigger-remove-icon>-</span>
+              </button>
+              <ul 
+                data-h2-menulist
+                role="menu">
+                <li role="presentation">
+                  <a 
+                    href="" 
+                    role="menuitem" 
+                    tabindex="-1" 
+                    title="">Sub2menu Item 01</a>
+                </li>
+                <li role="presentation">
+                  <a 
+                    href="" 
+                    role="menuitem" 
+                    tabindex="-1" 
+                    title="">Sub2menu Item 02</a>
+                </li>
+                <li role="presentation">
+                  <a 
+                    href="" 
+                    role="menuitem" 
+                    tabindex="-1" 
+                    title="">Sub2menu Item 03</a>
+                </li>
+              </ul>
+            </li>
+            <li role="presentation">
+              <a 
+                href="" 
+                role="menuitem" 
+                tabindex="-1" 
+                title="">Sub1menu Item 04</a>
+            </li>
+          </ul>
+        </li>
+        <li role="presentation">
+          <a 
+            href="" 
+            role="menuitem" 
+            title="">Menu Item 06</a>
+        </li>
+      </ul>
+    </div>
   </nav>
   <main>
     <!-- Content goes here. -->

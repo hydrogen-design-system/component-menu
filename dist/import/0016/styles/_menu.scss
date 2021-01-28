@@ -114,7 +114,7 @@
   }
 
   // Set main menu styles, along with nested children generic styles.
-  >[data-h2-menulist] {
+  [data-h2-menu-container] >[data-h2-menulist] {
     // background: $main-menu-background-color;
     width: 100%;
 
@@ -200,143 +200,143 @@
   }
 
   // Set main menu font colors.
-  >[data-h2-menulist] >li >[role="menuitem"] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[role="menuitem"] {
     color: $main-menu-font-color;
   }
 
   // Set main menu icon colors.
-  >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
-  >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
     color: $main-menu-icon-color;
   }
 
   // Generic color settings; Hydrogen only supports 5 levels deep.
   // Main Menu
-  >[data-h2-menulist] >li:not(:first-child) >[role="menuitem"] {
+  [data-h2-menu-container] >[data-h2-menulist] >li:not(:first-child) >[role="menuitem"] {
     border-top: 1px solid $main-menu-divider-color;
   }
-  >[data-h2-menulist]+[data-h2-menulist] >li >[role="menuitem"] {
+  [data-h2-menu-container] >[data-h2-menulist]+[data-h2-menulist] >li >[role="menuitem"] {
     border-top: 1px solid $main-menu-divider-color;
   }
-  >[data-h2-menulist] >li >a:hover {
+  [data-h2-menu-container] >[data-h2-menulist] >li >a:hover {
     color: $main-menu-anchor-hover;
   }
-  >[data-h2-menulist] >li >[data-h2-submenu-trigger] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-submenu-trigger] {
     background-color: $main-menu-button-background-color;
   }
   // Submenu Layer 1
-  >[data-h2-menulist] >li >[data-h2-menulist] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] {
     background-color: $submenu-background-color;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li:not(:first-child) >[role="menuitem"] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li:not(:first-child) >[role="menuitem"] {
     border-top-color: $submenu-1-border-color;
     border-top-style: solid;
     border-top-width: 1px;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
     color: $submenu-1-font-color;
     margin-left: calc(#{$padding} * 1.5);
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
     color: $submenu-1-font-color;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >a:hover {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >a:hover {
     color: $submenu-1-anchor-hover;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] {
     background-color: $submenu-1-button-background-color;
   }
   // Submenu Layer 2
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] {
     background-color: darken($submenu-background-color, 5%);
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li:not(:first-child) >[role="menuitem"] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li:not(:first-child) >[role="menuitem"] {
     border-top-color: $submenu-2-border-color;
     border-top-style: solid;
     border-top-width: 1px;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
     color: $submenu-2-font-color;
     margin-left: calc(#{$padding} * 2);
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
     color: $submenu-2-font-color;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >a:hover {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >a:hover {
     color: $submenu-2-anchor-hover;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] {
     background-color: $submenu-2-button-background-color;
   }
   // Submenu Layer 3
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] {
     background-color: darken($submenu-background-color, 10%);
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li:not(:first-child) >[role="menuitem"] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li:not(:first-child) >[role="menuitem"] {
     border-top-color: $submenu-3-border-color;
     border-top-style: solid;
     border-top-width: 1px;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
     color: $submenu-3-font-color;
     margin-left: calc(#{$padding} * 2.5);
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
     color: $submenu-3-font-color;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >a:hover {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >a:hover {
     color: $submenu-3-anchor-hover;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] {
     background-color: $submenu-3-button-background-color;
   }
   // Submenu Layer 4
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] {
     background-color: darken($submenu-background-color, 15%);
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li:not(:first-child) >[role="menuitem"] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li:not(:first-child) >[role="menuitem"] {
     border-top-color: $submenu-4-border-color;
     border-top-style: solid;
     border-top-width: 1px;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
     color: $submenu-4-font-color;
     margin-left: calc(#{$padding} * 3);
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
     color: $submenu-4-font-color;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >a:hover {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >a:hover {
     color: $submenu-4-anchor-hover;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] {
     background-color: $submenu-4-button-background-color;
   }
   // Submenu Layer 5
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] {
     background-color: darken($submenu-background-color, 20%);
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li:not(:first-child) >[role="menuitem"] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li:not(:first-child) >[role="menuitem"] {
     border-top-color: $submenu-5-border-color;
     border-top-style: solid;
     border-top-width: 1px;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
     color: $submenu-5-font-color;
     margin-left: calc(#{$padding} * 3.5);
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-add-icon],
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] [data-h2-submenu-trigger-remove-icon] {
     color: $submenu-5-font-color;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >a:hover {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >a:hover {
     color: $submenu-5-anchor-hover;
   }
-  >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] {
+  [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-submenu-trigger] {
     background-color: $submenu-5-button-background-color;
   }
 
@@ -354,7 +354,7 @@
     position: relative;
     width: 100%;
 
-    >[data-h2-menulist] {
+    [data-h2-menu-container] >[data-h2-menulist] {
       >li {
         display: inline-block;
         margin-left: -4px;
@@ -403,19 +403,19 @@
       }
     }
 
-    >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
+    [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
       margin-left: calc(#{$padding} * 1.5);
     }
 
-    >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
+    [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
       margin-left: calc(#{$padding} * 2);
     }
 
-    >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
+    [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
       margin-left: calc(#{$padding} * 2.5);
     }
 
-    >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
+    [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
       margin-left: calc(#{$padding} * 3);
     }
 
@@ -432,11 +432,42 @@
   }
 }
 
+@mixin h2-component-menu-topbar-contained(
+  $mq-medium,
+  $container,
+  $padding,
+  $menu-divider-color
+) {
+  @media #{$mq-medium} {
+    max-width: initial;
+
+    [data-h2-menu-container] {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: $container;
+    }
+
+    [data-h2-menu-container] >[data-h2-menulist] {
+      >li {
+
+        &:last-child {
+          border-right: 1px solid $menu-divider-color;
+        }
+
+        &:first-child {
+          border-left: 1px solid $menu-divider-color;
+        }
+
+      }
+    }
+  }
+}
+
 @mixin h2-component-menu-topbar-center(
   $mq-medium
 ) {
   @media #{$mq-medium} {
-    >[data-h2-menulist] {
+    [data-h2-menu-container] >[data-h2-menulist] {
       text-align: center;
     }
   }
@@ -446,7 +477,7 @@
   $mq-medium
 ) {
   @media #{$mq-medium} {
-    >[data-h2-menulist] {
+    [data-h2-menu-container] >[data-h2-menulist] {
       text-align: right;
       >li {
         >[data-h2-menulist] {
@@ -462,13 +493,15 @@
   $mq-medium
 ) {
   @media #{$mq-medium} {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    >[data-h2-menulist]:first-child {
+    [data-h2-menu-container] {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    [data-h2-menu-container] >[data-h2-menulist]:first-child {
       width: auto;
     }
-    >[data-h2-menulist]:last-child {
+    [data-h2-menu-container] >[data-h2-menulist]:last-child {
       text-align: right;
       width: auto;
       >li {
@@ -494,34 +527,17 @@
     left: 0;
     right: auto;
     width: calc((1/4) * 100%);
-    >[data-h2-menulist] {
+    [data-h2-menu-container] >[data-h2-menulist] {
       li {
         position: relative;
         >[role="menuitem"] {
-          margin: 0 $padding;
           padding: calc(#{$padding / 1.5}) calc(#{$padding} * 3) calc(#{$padding / 1.5}) 0;
         }
         >[data-h2-submenu-trigger] {
           padding: calc(#{$padding / 1.5}) $padding;
           top: 1px;
-          right: $padding;
         }
       }
-    }
-    >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
-      margin-left: calc(#{$padding} * 1.5);
-    }
-    >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
-      margin-left: calc(#{$padding} * 2);
-    }
-    >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
-      margin-left: calc(#{$padding} * 2.5);
-    }
-    >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
-      margin-left: calc(#{$padding} * 3);
-    }
-    >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
-      margin-left: calc(#{$padding} * 3.5);
     }
   }
 }
@@ -534,5 +550,40 @@
     top: 0;
     left: auto;
     right: 0;
+  }
+}
+
+@mixin h2-component-menu-sidebar-padded(
+  $mq-medium,
+  $multiplier,
+  $padding
+) {
+  @media #{$mq-medium} {
+    [data-h2-menu-container] >[data-h2-menulist] {
+      li {
+        >[role="menuitem"] {
+          margin-right: calc(#{$padding} #{$multiplier});
+          margin-left: calc(#{$padding} #{$multiplier});
+        }
+        >[data-h2-submenu-trigger] {
+          right: calc(#{$padding} #{$multiplier});
+        }
+      }
+    }
+    [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
+      margin-left: calc((#{$padding} #{$multiplier}) + .5rem);
+    }
+    [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
+      margin-left: calc((#{$padding} #{$multiplier}) + 1rem);
+    }
+    [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
+      margin-left: calc((#{$padding} #{$multiplier}) + 1.5rem);
+    }
+    [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
+      margin-left: calc((#{$padding} #{$multiplier}) + 2rem);
+    }
+    [data-h2-menu-container] >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[data-h2-menulist] >li >[role="menuitem"] {
+      margin-left: calc((#{$padding} #{$multiplier}) + 2.5rem);
+    }
   }
 }
