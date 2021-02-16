@@ -25,8 +25,8 @@ var json = JSON.parse(fs.readFileSync('./package.json'));
 // Set component and version variables.
 const component = json.component;
 const version = json.version.replace(/\./g, "");
-const dataH2ComponentDefault = "data-h2-" + component + "-wrapper_VERSION";
-const dataH2ComponentVersion = "data-h2-" + component + "-wrapper-" + version;
+const dataH2ComponentDefault = "data-h2-menu-wrapper_VERSION";
+const dataH2ComponentVersion = "data-h2-menu-wrapper-" + version;
 
 // Move and prepare the HTML.
 

@@ -30,8 +30,8 @@
 }
 
 // Load the core and component mixins within the versioned component attribute, while passing them their respective theme variables.
-// -0016 is replaced during the Gulp build script with the current component version, set in Gulpfile.js, before Sass is compiled.
-[data-h2-menu-wrapper-0016] {
+// -0017 is replaced during the Gulp build script with the current component version, set in Gulpfile.js, before Sass is compiled.
+[data-h2-menu-wrapper-0017] {
   // Menu Trigger
   [data-h2-mobile-menu-trigger] {
     @include h2-component-menu-trigger(
@@ -90,7 +90,7 @@
 }
 
 // Top Style Menus
-[data-h2-menu-wrapper-0016*="top"] {
+[data-h2-menu-wrapper-0017*="top"] {
   [data-h2-menu] {
     @include h2-component-menu-topbar(
       $mq-medium: var.$mq-medium,
@@ -99,7 +99,7 @@
     );
   }
 }
-[data-h2-menu-wrapper-0016*="top"][data-h2-menu-wrapper-0016*="sticky"] {
+[data-h2-menu-wrapper-0017*="top"][data-h2-menu-wrapper-0017*="sticky"] {
   [data-h2-menu] {
     @include h2-component-menu-topbar-sticky (
       $mq-medium: var.$mq-medium
@@ -108,7 +108,7 @@
 }
 @each $containKey, $containValue in maps.$container-size-map {
   @if $containKey != "full" {
-    [data-h2-menu-wrapper-0016*="top"][data-h2-menu-wrapper-0016*="#{$containKey}"] {
+    [data-h2-menu-wrapper-0017*="top"][data-h2-menu-wrapper-0017*="#{$containKey}"] {
       [data-h2-menu] {
         @include h2-component-menu-topbar-contained (
           $mq-medium: var.$mq-medium,
@@ -120,21 +120,21 @@
     }
   }
 }
-[data-h2-menu-wrapper-0016*="top"][data-h2-menu-wrapper-0016*="center"] {
+[data-h2-menu-wrapper-0017*="top"][data-h2-menu-wrapper-0017*="center"] {
   [data-h2-menu] {
     @include h2-component-menu-topbar-center (
       $mq-medium: var.$mq-medium
     );
   }
 }
-[data-h2-menu-wrapper-0016*="top"][data-h2-menu-wrapper-0016*="right"] {
+[data-h2-menu-wrapper-0017*="top"][data-h2-menu-wrapper-0017*="right"] {
   [data-h2-menu] {
     @include h2-component-menu-topbar-right (
       $mq-medium: var.$mq-medium
     );
   }
 }
-[data-h2-menu-wrapper-0016*="top"][data-h2-menu-wrapper-0016*="split"] {
+[data-h2-menu-wrapper-0017*="top"][data-h2-menu-wrapper-0017*="split"] {
   [data-h2-menu] {
     @include h2-component-menu-topbar-split (
       $mq-medium: var.$mq-medium
@@ -143,7 +143,7 @@
 }
 
 // Sidebar Style Menus
-[data-h2-menu-wrapper-0016*="side"] {
+[data-h2-menu-wrapper-0017*="side"] {
   [data-h2-menu] {
     @include h2-component-menu-sidebar (
       $mq-medium: var.$mq-medium,
@@ -159,7 +159,7 @@
     }
   }
 }
-[data-h2-menu-wrapper-0016*="side"][data-h2-menu-wrapper-0016*="right"] {
+[data-h2-menu-wrapper-0017*="side"][data-h2-menu-wrapper-0017*="right"] {
   [data-h2-menu] {
     @include h2-component-menu-sidebar-right (
       $mq-medium: var.$mq-medium,
@@ -177,7 +177,7 @@
   }
 }
 @each $whiteKey, $whiteValue in maps.$whitespace-map {
-  [data-h2-menu-wrapper-0016*="side"][data-h2-menu-wrapper-0016*="#{$whiteKey}"] {
+  [data-h2-menu-wrapper-0017*="side"][data-h2-menu-wrapper-0017*="#{$whiteKey}"] {
     [data-h2-menu] {
       @include h2-component-menu-sidebar-padded (
         $mq-medium: var.$mq-medium,

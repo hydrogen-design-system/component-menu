@@ -68,6 +68,15 @@
                 "Adds support for specifying left/right padding via argument on sidebar style menus.",
                 "Fixes a bug where the menu scripts didn't handle updates to the script formats of other components - this will be changed again when the menu component is migrated to vanilla JavaScript."
               ]
+            },
+            {
+              "release": 17,
+              "date": "2021/FEB/16",
+              "changes": [
+                "Breaking: Completely rewrites the JavaScript, removing Cash and finally migrating the component to vanilla.",
+                "Removes Cash from the dependency list.",
+                "Exports all available functions for use in JavaScript frameworks."
+              ]
             }
           ]
         }

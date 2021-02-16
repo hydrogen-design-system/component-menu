@@ -11,17 +11,24 @@
 import { h2CoreDocumentReady } from "./core";
 
 // Import functions from the component's module.js.
-import { h2ComMenAddUpDownToMainMenuItems_VERSION, h2ComMenAddTabEvents_VERSION, h2ComMenAddRightArrowToMainMenuItemsWithSubmenus_VERSION, h2ComMenAddSubmenuTriggerEvents_VERSION, h2ComMenAddMobileMenuTriggerEvent_VERSION, h2ComMenAddPageAnchorEvents_VERSION } from "./module"
+import { 
+  h2MenuAddUpDownArrowsToMainMenuItems_VERSION, 
+  h2MenuTabOrder_VERSION, 
+  h2MenuAddRightArrowToMainMenuItems_VERSION, 
+  h2MenuEnableSubmenuTriggers_VERSION, 
+  h2MenuAddMobileMenuTrigger_VERSION, 
+  h2MenuAddPageAnchor_VERSION 
+} from "./module"
 
 // Set the system variable to null so that the compiled code is namespaced within the instance. This variable shouldn't be changed in the component repository and is set to a different value by Hydrogen's system repository when the component is imported. Pass this variable to any functions in module.js that require the component to be instanced within the system.
-var system;
+var h2Target = "all";
 
 // Execute code when the document has finished loading.
 h2CoreDocumentReady(function(){
-  h2ComMenAddUpDownToMainMenuItems_VERSION(system);
-  h2ComMenAddTabEvents_VERSION(system);
-  h2ComMenAddRightArrowToMainMenuItemsWithSubmenus_VERSION(system);
-  h2ComMenAddSubmenuTriggerEvents_VERSION(system);
-  h2ComMenAddMobileMenuTriggerEvent_VERSION(system);
-  h2ComMenAddPageAnchorEvents_VERSION(system);
+  h2MenuAddUpDownArrowsToMainMenuItems_VERSION(h2Target);
+  h2MenuTabOrder_VERSION(h2Target);
+  h2MenuAddRightArrowToMainMenuItems_VERSION(h2Target);
+  h2MenuEnableSubmenuTriggers_VERSION(h2Target);
+  h2MenuAddMobileMenuTrigger_VERSION(h2Target);
+  h2MenuAddPageAnchor_VERSION(h2Target);
 });

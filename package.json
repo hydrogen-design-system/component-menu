@@ -1,6 +1,6 @@
 {
   "name": "@hydrogen-design-system/component-menu",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "component": "menu",
   "description": "Hydrogen's menu component.",
   "keywords": [
@@ -25,9 +25,6 @@
     "url": "https://github.com/hydrogen-design-system/component-menu/issues"
   },
   "homepage": "https://hydrogen.design",
-  "dependencies": {
-    "cash-dom": "^8.1.0"
-  },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.10",

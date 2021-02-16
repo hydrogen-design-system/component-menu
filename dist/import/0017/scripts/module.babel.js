@@ -3,49 +3,49 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.h2MenuRemoveEventsHandler = h2MenuRemoveEventsHandler;
-exports.h2MenuCloseOpenSubmenusHandler = h2MenuCloseOpenSubmenusHandler;
-exports.h2MenuCloseSubmenusAndActivateMainMenuHandler = h2MenuCloseSubmenusAndActivateMainMenuHandler;
-exports.h2MenuGetAllMenuItemsHandler = h2MenuGetAllMenuItemsHandler;
-exports.h2MenuGetTargetMenuItemsHandler = h2MenuGetTargetMenuItemsHandler;
-exports.h2MenuGetMenuListItemsWithSubmenusHandler = h2MenuGetMenuListItemsWithSubmenusHandler;
-exports.h2MenuOpenSubmenuHandler = h2MenuOpenSubmenuHandler;
-exports.h2MenuCloseSubmenuHandler = h2MenuCloseSubmenuHandler;
-exports.h2MenuToggleSubmenuEvent = h2MenuToggleSubmenuEvent;
-exports.h2MenuRightArrowEvent = h2MenuRightArrowEvent;
-exports.h2MenuUpDownArrowEvent = h2MenuUpDownArrowEvent;
-exports.h2MenuCloseMenuOnAnchorClickEvent = h2MenuCloseMenuOnAnchorClickEvent;
-exports.h2MenuEscapeAndLeftArrowEvent = h2MenuEscapeAndLeftArrowEvent;
-exports.h2MenuTabExitEvent = h2MenuTabExitEvent;
-exports.h2MenuMobileMenuToggleEvent = h2MenuMobileMenuToggleEvent;
-exports.h2MenuAddPageAnchor = h2MenuAddPageAnchor;
-exports.h2MenuAddMobileMenuTrigger = h2MenuAddMobileMenuTrigger;
-exports.h2MenuAddUpDownArrowsToMainMenuItems = h2MenuAddUpDownArrowsToMainMenuItems;
-exports.h2MenuTabOrder = h2MenuTabOrder;
-exports.h2MenuAddRightArrowToMainMenuItems = h2MenuAddRightArrowToMainMenuItems;
-exports.h2MenuEnableSubmenuTriggers = h2MenuEnableSubmenuTriggers;
+exports.h2MenuRemoveEventsHandler0017 = h2MenuRemoveEventsHandler0017;
+exports.h2MenuCloseOpenSubmenusHandler0017 = h2MenuCloseOpenSubmenusHandler0017;
+exports.h2MenuCloseSubmenusAndActivateMainMenuHandler0017 = h2MenuCloseSubmenusAndActivateMainMenuHandler0017;
+exports.h2MenuGetAllMenuItemsHandler0017 = h2MenuGetAllMenuItemsHandler0017;
+exports.h2MenuGetTargetMenuItemsHandler0017 = h2MenuGetTargetMenuItemsHandler0017;
+exports.h2MenuGetMenuListItemsWithSubmenusHandler0017 = h2MenuGetMenuListItemsWithSubmenusHandler0017;
+exports.h2MenuOpenSubmenuHandler0017 = h2MenuOpenSubmenuHandler0017;
+exports.h2MenuCloseSubmenuHandler0017 = h2MenuCloseSubmenuHandler0017;
+exports.h2MenuToggleSubmenuEvent0017 = h2MenuToggleSubmenuEvent0017;
+exports.h2MenuRightArrowEvent0017 = h2MenuRightArrowEvent0017;
+exports.h2MenuUpDownArrowEvent0017 = h2MenuUpDownArrowEvent0017;
+exports.h2MenuCloseMenuOnAnchorClickEvent0017 = h2MenuCloseMenuOnAnchorClickEvent0017;
+exports.h2MenuEscapeAndLeftArrowEvent0017 = h2MenuEscapeAndLeftArrowEvent0017;
+exports.h2MenuTabExitEvent0017 = h2MenuTabExitEvent0017;
+exports.h2MenuMobileMenuToggleEvent0017 = h2MenuMobileMenuToggleEvent0017;
+exports.h2MenuAddPageAnchor0017 = h2MenuAddPageAnchor0017;
+exports.h2MenuAddMobileMenuTrigger0017 = h2MenuAddMobileMenuTrigger0017;
+exports.h2MenuAddUpDownArrowsToMainMenuItems0017 = h2MenuAddUpDownArrowsToMainMenuItems0017;
+exports.h2MenuTabOrder0017 = h2MenuTabOrder0017;
+exports.h2MenuAddRightArrowToMainMenuItems0017 = h2MenuAddRightArrowToMainMenuItems0017;
+exports.h2MenuEnableSubmenuTriggers0017 = h2MenuEnableSubmenuTriggers0017;
 
 // Hydrogen / Component / Scripts
 // ===========================================================================================
 // Remove all event listeners from all menus.
-function h2MenuRemoveEventsHandler(menuWrapper) {
+function h2MenuRemoveEventsHandler0017(menuWrapper) {
   var menu = menuWrapper.querySelector("[data-h2-menu]");
   var allMenuItems = menu.querySelectorAll("*");
   allMenuItems.forEach(function (item) {
-    item.removeEventListener("keydown", h2MenuUpDownArrowEvent);
-    item.removeEventListener("keydown", h2MenuRightArrowEvent);
-    item.removeEventListener("keydown", h2MenuEscapeAndLeftArrowEvent);
+    item.removeEventListener("keydown", h2MenuUpDownArrowEvent0017);
+    item.removeEventListener("keydown", h2MenuRightArrowEvent0017);
+    item.removeEventListener("keydown", h2MenuEscapeAndLeftArrowEvent0017);
   });
   var menuTriggers = menuWrapper.querySelectorAll("[data-h2-mobile-menu-trigger]");
   menuTriggers.forEach(function (trigger) {
-    trigger.removeEventListener("keydown", h2MenuUpDownArrowEvent);
-    trigger.removeEventListener("keydown", h2MenuRightArrowEvent);
-    trigger.removeEventListener("keydown", h2MenuEscapeAndLeftArrowEvent);
+    trigger.removeEventListener("keydown", h2MenuUpDownArrowEvent0017);
+    trigger.removeEventListener("keydown", h2MenuRightArrowEvent0017);
+    trigger.removeEventListener("keydown", h2MenuEscapeAndLeftArrowEvent0017);
   });
 } // Close all open submenus.
 
 
-function h2MenuCloseOpenSubmenusHandler(menuWrapper) {
+function h2MenuCloseOpenSubmenusHandler0017(menuWrapper) {
   var menu = menuWrapper.querySelector("[data-h2-menu]");
   var menuListChildren = menu.querySelectorAll("[data-h2-menulist] li");
   menuListChildren.forEach(function (child) {
@@ -62,14 +62,14 @@ function h2MenuCloseOpenSubmenusHandler(menuWrapper) {
 } // Close all submenus and re-enable the main menu.
 
 
-function h2MenuCloseSubmenusAndActivateMainMenuHandler(menuWrapper) {
+function h2MenuCloseSubmenusAndActivateMainMenuHandler0017(menuWrapper) {
   var menu = menuWrapper.querySelector("[data-h2-menu]");
   var menuContainer = menu.querySelector("[data-h2-menu-container]");
   var mobileTrigger = menuWrapper.querySelector("[data-h2-mobile-menu-trigger]"); // Remove event listeners from all menus.
 
-  h2MenuRemoveEventsHandler(menuWrapper); // Close all submenus.
+  h2MenuRemoveEventsHandler0017(menuWrapper); // Close all submenus.
 
-  h2MenuCloseOpenSubmenusHandler(menuWrapper); // Get main menu items.
+  h2MenuCloseOpenSubmenusHandler0017(menuWrapper); // Get main menu items.
 
   var menuChildren = menuContainer.children;
   var mainMenus = [];
@@ -82,7 +82,7 @@ function h2MenuCloseSubmenusAndActivateMainMenuHandler(menuWrapper) {
     }
   }
 
-  var resetMainMenuItems = h2MenuGetTargetMenuItemsHandler(mainMenus); // If the main menu is mobile activated, add the mobile menu trigger.
+  var resetMainMenuItems = h2MenuGetTargetMenuItemsHandler0017(mainMenus); // If the main menu is mobile activated, add the mobile menu trigger.
 
   if (menu.classList.contains("h2-mobile-menu-active")) {
     resetMainMenuItems = resetMainMenuItems.concat(mobileTrigger);
@@ -90,15 +90,15 @@ function h2MenuCloseSubmenusAndActivateMainMenuHandler(menuWrapper) {
 
 
   resetMainMenuItems.forEach(function (item) {
-    item.removeEventListener("keydown", h2MenuUpDownArrowEvent);
-    item.removeEventListener("keydown", h2MenuRightArrowEvent);
-    item.addEventListener("keydown", h2MenuUpDownArrowEvent);
-    item.addEventListener("keydown", h2MenuRightArrowEvent);
+    item.removeEventListener("keydown", h2MenuUpDownArrowEvent0017);
+    item.removeEventListener("keydown", h2MenuRightArrowEvent0017);
+    item.addEventListener("keydown", h2MenuUpDownArrowEvent0017);
+    item.addEventListener("keydown", h2MenuRightArrowEvent0017);
   });
 } // Get all menu items inside the entire menu.
 
 
-function h2MenuGetAllMenuItemsHandler(menuWrapper) {
+function h2MenuGetAllMenuItemsHandler0017(menuWrapper) {
   // Get the mobile menu trigger.
   var mobileMenuTrigger = menuWrapper.querySelector("[data-h2-mobile-menu-trigger]"); // Create an empty array that we can add menu items to.
 
@@ -130,7 +130,7 @@ function h2MenuGetAllMenuItemsHandler(menuWrapper) {
 // Get all menu items inside of an array of menulists.
 
 
-function h2MenuGetTargetMenuItemsHandler(menuLists) {
+function h2MenuGetTargetMenuItemsHandler0017(menuLists) {
   // Set a false variable indicating the the mobile menu is inactive by default.
   var isMenuMobileActivated = false; // Set an empty variable for the mobile menu trigger.
 
@@ -142,7 +142,7 @@ function h2MenuGetTargetMenuItemsHandler(menuLists) {
     // Check to see if the parentNode is the menu container AND that the data-h2-menu element is mobile activated. If it is, set the activated variable to true, and add the mobile trigger element.
     if (list.parentNode.hasAttribute("data-h2-menu-container") == true && list.parentNode.parentNode.classList.contains("h2-mobile-menu-active")) {
       isMenuMobileActivated = true;
-      mobileMenuTrigger = list.closest("[data-h2-menu-wrapper]").querySelector("[data-h2-mobile-menu-trigger]");
+      mobileMenuTrigger = list.closest("[data-h2-menu-wrapper-0017]").querySelector("[data-h2-mobile-menu-trigger]");
     } // Add the submenu trigger.
 
 
@@ -202,7 +202,7 @@ function h2MenuGetTargetMenuItemsHandler(menuLists) {
 } // Get all menu items with submenus inside of a menulist.
 
 
-function h2MenuGetMenuListItemsWithSubmenusHandler(menuLists) {
+function h2MenuGetMenuListItemsWithSubmenusHandler0017(menuLists) {
   // Set an empty array for the menu items.
   var menuItemsWithSubmenus = []; // Loop through the menu lists that have been passed.
 
@@ -255,7 +255,7 @@ function h2MenuGetMenuListItemsWithSubmenusHandler(menuLists) {
 // Open script.
 
 
-function h2MenuOpenSubmenuHandler(trigger) {
+function h2MenuOpenSubmenuHandler0017(trigger) {
   // Figure out which element is being used as the trigger and set the values appropriately to open the submenu.
   var menuItem = "";
   var submenuTrigger = "";
@@ -285,25 +285,25 @@ function h2MenuOpenSubmenuHandler(trigger) {
   menuItem.setAttribute("aria-expanded", true);
   submenuTrigger.setAttribute("aria-expanded", true); // Remove all event listeners.
 
-  var menuWrapper = trigger.closest("[data-h2-menu-wrapper]");
-  h2MenuRemoveEventsHandler(menuWrapper); // Find submenu and it's items.
+  var menuWrapper = trigger.closest("[data-h2-menu-wrapper-0017]");
+  h2MenuRemoveEventsHandler0017(menuWrapper); // Find submenu and it's items.
 
-  var submenuItems = h2MenuGetTargetMenuItemsHandler(submenu); // Clean and add event listeners.
+  var submenuItems = h2MenuGetTargetMenuItemsHandler0017(submenu); // Clean and add event listeners.
 
   submenuItems.forEach(function (item) {
-    item.removeEventListener("keydown", h2MenuRightArrowEvent);
-    item.removeEventListener("keydown", h2MenuUpDownArrowEvent);
-    item.removeEventListener("keydown", h2MenuEscapeAndLeftArrowEvent);
-    item.addEventListener("keydown", h2MenuRightArrowEvent);
-    item.addEventListener("keydown", h2MenuUpDownArrowEvent);
-    item.addEventListener("keydown", h2MenuEscapeAndLeftArrowEvent);
+    item.removeEventListener("keydown", h2MenuRightArrowEvent0017);
+    item.removeEventListener("keydown", h2MenuUpDownArrowEvent0017);
+    item.removeEventListener("keydown", h2MenuEscapeAndLeftArrowEvent0017);
+    item.addEventListener("keydown", h2MenuRightArrowEvent0017);
+    item.addEventListener("keydown", h2MenuUpDownArrowEvent0017);
+    item.addEventListener("keydown", h2MenuEscapeAndLeftArrowEvent0017);
   }); // Focus first menu item.
 
   submenuItems[0].focus();
 } // Close script.
 
 
-function h2MenuCloseSubmenuHandler(trigger) {
+function h2MenuCloseSubmenuHandler0017(trigger) {
   // Figure out which element is being used as the trigger and set the values appropriately to open the submenu.
   var menuItem = "";
   var submenuTrigger = "";
@@ -329,8 +329,8 @@ function h2MenuCloseSubmenuHandler(trigger) {
   } // Remove all event listeners.
 
 
-  var menuWrapper = trigger.closest("[data-h2-menu-wrapper]");
-  h2MenuRemoveEventsHandler(menuWrapper); // Find the parent menulist and check to see if it is nested inside of the menu container. We need to make sure that if it is, we account for the possibility of a sibling menulist item.
+  var menuWrapper = trigger.closest("[data-h2-menu-wrapper-0017]");
+  h2MenuRemoveEventsHandler0017(menuWrapper); // Find the parent menulist and check to see if it is nested inside of the menu container. We need to make sure that if it is, we account for the possibility of a sibling menulist item.
 
   var parentMenuItems = [];
   var parentMenu = triggerParent.closest("[data-h2-menulist]");
@@ -349,11 +349,11 @@ function h2MenuCloseSubmenuHandler(trigger) {
       }
     }
 
-    parentMenuItems = h2MenuGetTargetMenuItemsHandler(mainMenus);
+    parentMenuItems = h2MenuGetTargetMenuItemsHandler0017(mainMenus);
   } else if (parentMenuWrapper.tagName == "LI") {
     var parentMenuArray = [];
     parentMenuArray = parentMenuArray.concat(parentMenu);
-    parentMenuItems = h2MenuGetTargetMenuItemsHandler(parentMenuArray); // Check to see if the parentMenuWrapper has a submenu trigger as its child, and if it does, add the trigger to the parentMenuItems.
+    parentMenuItems = h2MenuGetTargetMenuItemsHandler0017(parentMenuArray); // Check to see if the parentMenuWrapper has a submenu trigger as its child, and if it does, add the trigger to the parentMenuItems.
 
     var menuChildren = parentMenuWrapper.children;
     var parentTrigger = "";
@@ -375,12 +375,12 @@ function h2MenuCloseSubmenuHandler(trigger) {
 
 
   parentMenuItems.forEach(function (item) {
-    item.removeEventListener("keydown", h2MenuRightArrowEvent);
-    item.removeEventListener("keydown", h2MenuUpDownArrowEvent);
-    item.removeEventListener("keydown", h2MenuEscapeAndLeftArrowEvent);
-    item.addEventListener("keydown", h2MenuRightArrowEvent);
-    item.addEventListener("keydown", h2MenuUpDownArrowEvent);
-    item.addEventListener("keydown", h2MenuEscapeAndLeftArrowEvent);
+    item.removeEventListener("keydown", h2MenuRightArrowEvent0017);
+    item.removeEventListener("keydown", h2MenuUpDownArrowEvent0017);
+    item.removeEventListener("keydown", h2MenuEscapeAndLeftArrowEvent0017);
+    item.addEventListener("keydown", h2MenuRightArrowEvent0017);
+    item.addEventListener("keydown", h2MenuUpDownArrowEvent0017);
+    item.addEventListener("keydown", h2MenuEscapeAndLeftArrowEvent0017);
   }); // Close all nested submenus.
 
   var nestedSubmenus = triggerParent.querySelectorAll("[data-h2-menulist] li");
@@ -403,20 +403,20 @@ function h2MenuCloseSubmenuHandler(trigger) {
 // Decision tree on whether to open or close a submenu on click.
 
 
-function h2MenuToggleSubmenuEvent(e) {
+function h2MenuToggleSubmenuEvent0017(e) {
   var trigger = e.currentTarget; // Check if the parent <li> is active or not.
 
   var triggerParent = trigger.closest("li");
 
   if (triggerParent.classList.contains("h2-active")) {
-    h2MenuCloseSubmenuHandler(trigger);
+    h2MenuCloseSubmenuHandler0017(trigger);
   } else {
-    h2MenuOpenSubmenuHandler(trigger);
+    h2MenuOpenSubmenuHandler0017(trigger);
   }
 } // Right Trigger to Open Submenu
 
 
-function h2MenuRightArrowEvent(e) {
+function h2MenuRightArrowEvent0017(e) {
   var key = e.keyCode || e.which;
   var trigger = e.currentTarget;
 
@@ -438,13 +438,13 @@ function h2MenuRightArrowEvent(e) {
 
 
     if (submenuPresence == true) {
-      h2MenuOpenSubmenuHandler(trigger);
+      h2MenuOpenSubmenuHandler0017(trigger);
     }
   }
 } // Up/down arrow loop.
 
 
-function h2MenuUpDownArrowEvent(e) {
+function h2MenuUpDownArrowEvent0017(e) {
   // Assign the trigger and find it's menu. To do this, we need to check to see if the trigger is the mobile menu trigger, because if it is, we need to check different DOM elements than a standard menu trigger.
   var trigger = e.currentTarget;
   var menuLists = [];
@@ -484,7 +484,7 @@ function h2MenuUpDownArrowEvent(e) {
     }
   }
 
-  var menuListItems = h2MenuGetTargetMenuItemsHandler(menuLists); // Get the keycode of the event.
+  var menuListItems = h2MenuGetTargetMenuItemsHandler0017(menuLists); // Get the keycode of the event.
 
   var key = e.keyCode || e.which; // Get the number of items in the menu.
 
@@ -526,11 +526,11 @@ function h2MenuUpDownArrowEvent(e) {
 // This function closes the menu when a link is clicked that specifically takes the user to a point on their current page.
 
 
-function h2MenuCloseMenuOnAnchorClickEvent(e) {
+function h2MenuCloseMenuOnAnchorClickEvent0017(e) {
   var link = e.currentTarget; // Check to see if the menu is active.
 
   var menu = link.closest("[data-h2-menu]");
-  var menuWrapper = menu.closest("[data-h2-menu-wrapper]");
+  var menuWrapper = menu.closest("[data-h2-menu-wrapper-0017]");
   var menuTriggers = menuWrapper.querySelectorAll("[data-h2-mobile-menu-trigger]"); // Get the destination.
 
   var destination = link.getAttribute("href");
@@ -540,9 +540,9 @@ function h2MenuCloseMenuOnAnchorClickEvent(e) {
     // Check to see if the link's href is a page anchor.
     if (destination.match("^#")) {
       // Remove event listeners from the current menu.
-      h2MenuRemoveEventsHandler(menuWrapper); // Close all submenus and reset aria values.
+      h2MenuRemoveEventsHandler0017(menuWrapper); // Close all submenus and reset aria values.
 
-      h2MenuCloseOpenSubmenusHandler(menuWrapper); // Close the main menu and reset aria values.
+      h2MenuCloseOpenSubmenusHandler0017(menuWrapper); // Close the main menu and reset aria values.
 
       menu.classList.remove("h2-mobile-menu-active");
       menuTriggers.forEach(function (trigger) {
@@ -557,7 +557,7 @@ function h2MenuCloseMenuOnAnchorClickEvent(e) {
     // Check to see if the link's href is a page anchor.
     if (destination.match("^#")) {
       var menuType = "";
-      var menuAttribute = menuWrapper.getAttribute("data-h2-menu-wrapper");
+      var menuAttribute = menuWrapper.getAttribute("data-h2-menu-wrapper-0017");
 
       if (menuAttribute.includes("top(")) {
         menuType = "top";
@@ -567,12 +567,12 @@ function h2MenuCloseMenuOnAnchorClickEvent(e) {
 
       if (menuType == "top") {
         // Remove event listeners from the current menu.
-        h2MenuRemoveEventsHandler(menuWrapper); // Close all submenus and reset aria values.
+        h2MenuRemoveEventsHandler0017(menuWrapper); // Close all submenus and reset aria values.
 
-        h2MenuCloseOpenSubmenusHandler(menuWrapper);
+        h2MenuCloseOpenSubmenusHandler0017(menuWrapper);
       } else if (menuType == "side") {
         // Remove event listeners from the current menu.
-        h2MenuRemoveEventsHandler(menuWrapper); // Find the main menu. Remember that there can in fact be two menus nested in the container.
+        h2MenuRemoveEventsHandler0017(menuWrapper); // Find the main menu. Remember that there can in fact be two menus nested in the container.
 
         var mainMenus = [];
         var menuContainer = menu.querySelector("[data-h2-menu-container]");
@@ -587,16 +587,16 @@ function h2MenuCloseMenuOnAnchorClickEvent(e) {
         } // Set the up/down listeners on the main menu items.
 
 
-        var mainMenuItems = h2MenuGetTargetMenuItemsHandler(mainMenus);
+        var mainMenuItems = h2MenuGetTargetMenuItemsHandler0017(mainMenus);
         mainMenuItems.forEach(function (item) {
-          item.removeEventListener("keydown", h2MenuUpDownArrowEvent);
-          item.addEventListener("keydown", h2MenuUpDownArrowEvent);
+          item.removeEventListener("keydown", h2MenuUpDownArrowEvent0017);
+          item.addEventListener("keydown", h2MenuUpDownArrowEvent0017);
         }); // Set the right listener on the main menu items that have submenus.
 
-        var mainMenuItemsWithSubmenus = h2MenuGetMenuListItemsWithSubmenusHandler(mainMenus);
+        var mainMenuItemsWithSubmenus = h2MenuGetMenuListItemsWithSubmenusHandler0017(mainMenus);
         mainMenuItemsWithSubmenus.forEach(function (item) {
-          item.removeEventListener("keydown", h2MenuRightArrowEvent);
-          item.addEventListener("keydown", h2MenuRightArrowEvent);
+          item.removeEventListener("keydown", h2MenuRightArrowEvent0017);
+          item.addEventListener("keydown", h2MenuRightArrowEvent0017);
         });
       }
     }
@@ -604,7 +604,7 @@ function h2MenuCloseMenuOnAnchorClickEvent(e) {
 } // Left/Escape Trigger to Close Submenus
 
 
-function h2MenuEscapeAndLeftArrowEvent(e) {
+function h2MenuEscapeAndLeftArrowEvent0017(e) {
   var key = e.keyCode || e.which;
   var trigger = e.currentTarget;
   var triggerParent = trigger.parentNode; // a <li>
@@ -615,7 +615,7 @@ function h2MenuEscapeAndLeftArrowEvent(e) {
 
   var parentMenuWrapperChildren = parentMenuWrapper.children; // parentMenu's siblings
 
-  var menuWrapper = trigger.closest("[data-h2-menu-wrapper]");
+  var menuWrapper = trigger.closest("[data-h2-menu-wrapper-0017]");
   var menu = trigger.closest("[data-h2-menu]");
   var mobileTrigger = menuWrapper.querySelector("[data-h2-mobile-menu-trigger]");
 
@@ -632,9 +632,9 @@ function h2MenuEscapeAndLeftArrowEvent(e) {
         // console.log("You're trying to close the main menu.");
         if (menu.classList.contains("h2-mobile-menu-active")) {
           // Remove event listeners from all menus.
-          h2MenuRemoveEventsHandler(menuWrapper); // Close all submenus.
+          h2MenuRemoveEventsHandler0017(menuWrapper); // Close all submenus.
 
-          h2MenuCloseOpenSubmenusHandler(menuWrapper); // Close the main menu and reset aria values.
+          h2MenuCloseOpenSubmenusHandler0017(menuWrapper); // Close the main menu and reset aria values.
 
           menu.classList.remove("h2-mobile-menu-active"); // Get main menu items.
 
@@ -649,7 +649,7 @@ function h2MenuEscapeAndLeftArrowEvent(e) {
             }
           }
 
-          var menuTriggers = h2MenuGetMenuListItemsWithSubmenusHandler(mainMenus);
+          var menuTriggers = h2MenuGetMenuListItemsWithSubmenusHandler0017(mainMenus);
           menuTriggers = menuTriggers.concat(mobileTrigger);
           menuTriggers.forEach(function (trigger) {
             trigger.classList.remove("h2-active");
@@ -669,7 +669,7 @@ function h2MenuEscapeAndLeftArrowEvent(e) {
         } // Close the submenu and focus the parent trigger.
 
 
-        h2MenuCloseSubmenuHandler(submenuTrigger);
+        h2MenuCloseSubmenuHandler0017(submenuTrigger);
         submenuTrigger.focus();
       }
     } else if (trigger.hasAttribute("data-h2-submenu-trigger")) {
@@ -677,7 +677,7 @@ function h2MenuEscapeAndLeftArrowEvent(e) {
       // Figure out if the trigger was the parent one, or if it's one in the active menu by testing to see if the sibling submenu is active or not.
       if (triggerParent.classList.contains("h2-active")) {
         // Close the submenu and focus the parent trigger.
-        h2MenuCloseSubmenuHandler(trigger); // submenuTrigger.focus();
+        h2MenuCloseSubmenuHandler0017(trigger); // submenuTrigger.focus();
       } else {
         // console.log("This trigger is a trigger inside the open submenu.");
         // Check to see if you're trying to close the main menu.
@@ -685,9 +685,9 @@ function h2MenuEscapeAndLeftArrowEvent(e) {
           // console.log("You're trying to close the main menu.");
           if (menu.classList.contains("h2-mobile-menu-active")) {
             // Remove event listeners from all menus.
-            h2MenuRemoveEventsHandler(menuWrapper); // Close all submenus.
+            h2MenuRemoveEventsHandler0017(menuWrapper); // Close all submenus.
 
-            h2MenuCloseOpenSubmenusHandler(menuWrapper); // Close the main menu and reset aria values.
+            h2MenuCloseOpenSubmenusHandler0017(menuWrapper); // Close the main menu and reset aria values.
 
             menu.classList.remove("h2-mobile-menu-active"); // Get main menu items.
 
@@ -702,7 +702,7 @@ function h2MenuEscapeAndLeftArrowEvent(e) {
               }
             }
 
-            var menuTriggers = h2MenuGetMenuListItemsWithSubmenusHandler(mainMenus);
+            var menuTriggers = h2MenuGetMenuListItemsWithSubmenusHandler0017(mainMenus);
             menuTriggers = menuTriggers.concat(mobileTrigger);
             menuTriggers.forEach(function (trigger) {
               trigger.classList.remove("h2-active");
@@ -723,7 +723,7 @@ function h2MenuEscapeAndLeftArrowEvent(e) {
           } // Close the submenu and focus the parent trigger.
 
 
-          h2MenuCloseSubmenuHandler(submenuTrigger);
+          h2MenuCloseSubmenuHandler0017(submenuTrigger);
           submenuTrigger.focus();
         }
       }
@@ -733,11 +733,11 @@ function h2MenuEscapeAndLeftArrowEvent(e) {
 // This function closes all submenus and re-enables up/down, right, and left/escape key listeners if tab is pressed on any main menu items.
 
 
-function h2MenuTabExitEvent(e) {
+function h2MenuTabExitEvent0017(e) {
   var documentBody = document.querySelector("body");
   var key = e.keyCode || e.which;
   var trigger = e.currentTarget;
-  var menuWrapper = trigger.closest("[data-h2-menu-wrapper]");
+  var menuWrapper = trigger.closest("[data-h2-menu-wrapper-0017]");
   var menu = menuWrapper.querySelector("[data-h2-menu]");
   var menuContainer = menu.querySelector("[data-h2-menu-container]"); // If the menu is mobile activated, you need to close the main menu on tab out of the first or last items.
 
@@ -755,7 +755,7 @@ function h2MenuTabExitEvent(e) {
       }
     }
 
-    menuItemIndex = h2MenuGetTargetMenuItemsHandler(menuLists); // Check to see if the item that was tabbed on is the first or last item in the list.
+    menuItemIndex = h2MenuGetTargetMenuItemsHandler0017(menuLists); // Check to see if the item that was tabbed on is the first or last item in the list.
 
     var itemCount = menuItemIndex.length - 1;
     var currentIndex = menuItemIndex.indexOf(trigger); // If the item was the first item and they tabbed up, close the menu and submenus.
@@ -765,9 +765,9 @@ function h2MenuTabExitEvent(e) {
       // console.log("you're on the first item in the menu.");
       if (key == 9 && e.shiftKey) {
         // Remove event listeners from all menus.
-        h2MenuRemoveEventsHandler(menuWrapper); // Close all submenus.
+        h2MenuRemoveEventsHandler0017(menuWrapper); // Close all submenus.
 
-        h2MenuCloseOpenSubmenusHandler(menuWrapper); // Close the main menu.
+        h2MenuCloseOpenSubmenusHandler0017(menuWrapper); // Close the main menu.
 
         menu.classList.remove("h2-mobile-menu-active");
         menuItemIndex.forEach(function (trigger) {
@@ -782,9 +782,9 @@ function h2MenuTabExitEvent(e) {
         // console.log("you're on the last item in the menu.");
         if (key == 9 && !e.shiftKey) {
           // Remove event listeners from all menus.
-          h2MenuRemoveEventsHandler(menuWrapper); // Close all submenus.
+          h2MenuRemoveEventsHandler0017(menuWrapper); // Close all submenus.
 
-          h2MenuCloseOpenSubmenusHandler(menuWrapper); // Close the main menu.
+          h2MenuCloseOpenSubmenusHandler0017(menuWrapper); // Close the main menu.
 
           menu.classList.remove("h2-mobile-menu-active");
           menuItemIndex.forEach(function (trigger) {
@@ -796,23 +796,23 @@ function h2MenuTabExitEvent(e) {
       } // Otherwise, tab to the next item like normal and close submenus..
       else {
           if (key == 9 && !e.shiftKey || key == 9 && e.shiftKey) {
-            h2MenuCloseSubmenusAndActivateMainMenuHandler(menuWrapper);
+            h2MenuCloseSubmenusAndActivateMainMenuHandler0017(menuWrapper);
           }
         }
   } // Otherwise, tab as normal while closing submenus.
   else {
       if (key == 9 && !e.shiftKey || key == 9 && e.shiftKey) {
-        h2MenuCloseSubmenusAndActivateMainMenuHandler(menuWrapper);
+        h2MenuCloseSubmenusAndActivateMainMenuHandler0017(menuWrapper);
       }
     }
 } // Mobile menu toggle script.
 // This function opens or closes the main menu when on a narrow device.
 
 
-function h2MenuMobileMenuToggleEvent(e) {
+function h2MenuMobileMenuToggleEvent0017(e) {
   var trigger = e.currentTarget;
   var documentBody = document.querySelector("body");
-  var menuWrapper = trigger.closest("[data-h2-menu-wrapper]");
+  var menuWrapper = trigger.closest("[data-h2-menu-wrapper-0017]");
   var menu = menuWrapper.querySelector("[data-h2-menu]");
   var menuContainer = menu.querySelector("[data-h2-menu-container]"); // Get main menu items.
 
@@ -830,12 +830,12 @@ function h2MenuMobileMenuToggleEvent(e) {
 
   if (trigger.classList.contains("h2-active")) {
     // Remove event listeners from all menus.
-    h2MenuRemoveEventsHandler(menuWrapper); // Close all submenus.
+    h2MenuRemoveEventsHandler0017(menuWrapper); // Close all submenus.
 
-    h2MenuCloseOpenSubmenusHandler(menuWrapper); // Close the main menu.
+    h2MenuCloseOpenSubmenusHandler0017(menuWrapper); // Close the main menu.
 
     menu.classList.remove("h2-mobile-menu-active");
-    var menuTriggers = h2MenuGetMenuListItemsWithSubmenusHandler(mainMenus);
+    var menuTriggers = h2MenuGetMenuListItemsWithSubmenusHandler0017(mainMenus);
     menuTriggers = menuTriggers.concat(trigger);
     menuTriggers.forEach(function (trigger) {
       trigger.classList.remove("h2-active");
@@ -849,31 +849,31 @@ function h2MenuMobileMenuToggleEvent(e) {
     trigger.setAttribute("aria-expanded", true);
     documentBody.classList.add("h2-mobile-menu-body-lock"); // Remove event listeners from all menus.
 
-    h2MenuRemoveEventsHandler(menuWrapper);
-    var resetMainMenuItems = h2MenuGetTargetMenuItemsHandler(mainMenus); // Re-add up/down arrow listeners, left/escape listners.
+    h2MenuRemoveEventsHandler0017(menuWrapper);
+    var resetMainMenuItems = h2MenuGetTargetMenuItemsHandler0017(mainMenus); // Re-add up/down arrow listeners, left/escape listners.
 
     resetMainMenuItems.forEach(function (item) {
-      item.removeEventListener("keydown", h2MenuUpDownArrowEvent);
-      item.removeEventListener("keydown", h2MenuEscapeAndLeftArrowEvent);
-      item.removeEventListener("keydown", h2MenuTabExitEvent);
-      item.addEventListener("keydown", h2MenuUpDownArrowEvent);
-      item.addEventListener("keydown", h2MenuEscapeAndLeftArrowEvent);
-      item.addEventListener("keydown", h2MenuTabExitEvent);
+      item.removeEventListener("keydown", h2MenuUpDownArrowEvent0017);
+      item.removeEventListener("keydown", h2MenuEscapeAndLeftArrowEvent0017);
+      item.removeEventListener("keydown", h2MenuTabExitEvent0017);
+      item.addEventListener("keydown", h2MenuUpDownArrowEvent0017);
+      item.addEventListener("keydown", h2MenuEscapeAndLeftArrowEvent0017);
+      item.addEventListener("keydown", h2MenuTabExitEvent0017);
     }); // Get main menu items with submenus.
 
-    var resetMainMenuItemsWithSubmenus = h2MenuGetMenuListItemsWithSubmenusHandler(mainMenus); // Add right arrow event listener to main menu items with submenus.
+    var resetMainMenuItemsWithSubmenus = h2MenuGetMenuListItemsWithSubmenusHandler0017(mainMenus); // Add right arrow event listener to main menu items with submenus.
 
     resetMainMenuItemsWithSubmenus.forEach(function (item) {
-      item.removeEventListener("keydown", h2MenuRightArrowEvent);
-      item.addEventListener("keydown", h2MenuRightArrowEvent);
+      item.removeEventListener("keydown", h2MenuRightArrowEvent0017);
+      item.addEventListener("keydown", h2MenuRightArrowEvent0017);
     }); // Add tab listeners to tab out of the menu and close submenus.
 
-    var resetAllMenuItems = h2MenuGetAllMenuItemsHandler(menuWrapper); // Add mobile trigger to main menu items.
+    var resetAllMenuItems = h2MenuGetAllMenuItemsHandler0017(menuWrapper); // Add mobile trigger to main menu items.
 
     resetAllMenuItems = resetAllMenuItems.concat(trigger);
     resetAllMenuItems.forEach(function (item) {
-      item.removeEventListener("keydown", h2MenuTabExitEvent);
-      item.addEventListener("keydown", h2MenuTabExitEvent);
+      item.removeEventListener("keydown", h2MenuTabExitEvent0017);
+      item.addEventListener("keydown", h2MenuTabExitEvent0017);
     });
   }
 } // ===========================================================================================
@@ -887,7 +887,7 @@ function h2MenuSystemCheck(targetMenu, hydrogenSystemVersion, functionError) {
     // Because the user is targeting all menus, we need to check if they've specified a version as well.
     if (hydrogenSystemVersion == "latest") {
       // The user is using the most recent version of Hydrogen.
-      menus = document.querySelectorAll("[data-h2-menu-wrapper]");
+      menus = document.querySelectorAll("[data-h2-menu-wrapper-0017]");
       return menus;
     } else {
       // The user is targeting a specific version of Hydrogen. It's important that we check to see if the wrapper itself has the version value, and if it doesn't check its parents.
@@ -897,12 +897,12 @@ function h2MenuSystemCheck(targetMenu, hydrogenSystemVersion, functionError) {
         console.error("Hydrogen (" + functionError + "): no data-h2-system element can be found with the system version (" + hydrogenSystemVersion + ") you've specified.");
         return false;
       } else {
-        if (system.hasAttribute("data-h2-menu-wrapper")) {
+        if (system.hasAttribute("data-h2-menu-wrapper-0017")) {
           // The system object is also the menu wrapper.
           menus = menus.concat(system);
         }
 
-        var instancedMenus = system.querySelectorAll("[data-h2-menu-wrapper]");
+        var instancedMenus = system.querySelectorAll("[data-h2-menu-wrapper-0017]");
 
         if (instancedMenus != false || instancedMenus != null) {
           instancedMenus.forEach(function (instance) {
@@ -943,10 +943,10 @@ function h2MenuSystemCheck(targetMenu, hydrogenSystemVersion, functionError) {
 } // Add anchor click events to the menu items.
 
 
-function h2MenuAddPageAnchor(targetMenu) {
+function h2MenuAddPageAnchor0017(targetMenu) {
   var hydrogenSystemVersion = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "latest";
   // Set the system check error value.
-  var functionError = "h2MenuAddPageAnchor"; // Use the system check function to get the appropriate menu wrappers.
+  var functionError = "h2MenuAddPageAnchor0017"; // Use the system check function to get the appropriate menu wrappers.
 
   var menuWrappers = h2MenuSystemCheck(targetMenu, hydrogenSystemVersion, functionError); // Loop through the available menu wrappers.
 
@@ -956,8 +956,8 @@ function h2MenuAddPageAnchor(targetMenu) {
 
       if (menuItems != false && menuItems != null && menuItems != undefined) {
         menuItems.forEach(function (menuItem) {
-          menuItem.removeEventListener("click", h2MenuCloseMenuOnAnchorClickEvent);
-          menuItem.addEventListener("click", h2MenuCloseMenuOnAnchorClickEvent);
+          menuItem.removeEventListener("click", h2MenuCloseMenuOnAnchorClickEvent0017);
+          menuItem.addEventListener("click", h2MenuCloseMenuOnAnchorClickEvent0017);
         });
       }
     });
@@ -965,10 +965,10 @@ function h2MenuAddPageAnchor(targetMenu) {
 } // Add mobile menu trigger listeners.
 
 
-function h2MenuAddMobileMenuTrigger(targetMenu) {
+function h2MenuAddMobileMenuTrigger0017(targetMenu) {
   var hydrogenSystemVersion = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "latest";
   // Set the system check error value.
-  var functionError = "h2MenuAddMobileMenuTrigger"; // Use the system check function to get the appropriate menu wrappers.
+  var functionError = "h2MenuAddMobileMenuTrigger0017"; // Use the system check function to get the appropriate menu wrappers.
 
   var menuWrappers = h2MenuSystemCheck(targetMenu, hydrogenSystemVersion, functionError); // Loop through the available menu wrappers.
 
@@ -978,18 +978,18 @@ function h2MenuAddMobileMenuTrigger(targetMenu) {
 
       if (mobileTriggers != false && mobileTriggers != null && mobileTriggers != undefined) {
         mobileTriggers.forEach(function (mobileTrigger) {
-          mobileTrigger.removeEventListener("click", h2MenuMobileMenuToggleEvent);
-          mobileTrigger.addEventListener("click", h2MenuMobileMenuToggleEvent);
+          mobileTrigger.removeEventListener("click", h2MenuMobileMenuToggleEvent0017);
+          mobileTrigger.addEventListener("click", h2MenuMobileMenuToggleEvent0017);
         });
       }
     });
   }
 }
 
-function h2MenuAddUpDownArrowsToMainMenuItems(targetMenu) {
+function h2MenuAddUpDownArrowsToMainMenuItems0017(targetMenu) {
   var hydrogenSystemVersion = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "latest";
   // Set the system check error value.
-  var functionError = "h2MenuAddUpDownArrowsToMainMenuItems"; // Use the system check function to get the appropriate menu wrappers.
+  var functionError = "h2MenuAddUpDownArrowsToMainMenuItems0017"; // Use the system check function to get the appropriate menu wrappers.
 
   var menuWrappers = h2MenuSystemCheck(targetMenu, hydrogenSystemVersion, functionError); // Loop through the available menu wrappers.
 
@@ -1010,12 +1010,12 @@ function h2MenuAddUpDownArrowsToMainMenuItems(targetMenu) {
 
 
       if (mainMenus != false && mainMenus != null && mainMenus != undefined) {
-        var mainMenuItems = h2MenuGetTargetMenuItemsHandler(mainMenus); // Loop through each menu item and add the event listner.
+        var mainMenuItems = h2MenuGetTargetMenuItemsHandler0017(mainMenus); // Loop through each menu item and add the event listner.
 
         if (mainMenuItems != false && mainMenuItems != null && mainMenuItems != undefined) {
           mainMenuItems.forEach(function (item) {
-            item.removeEventListener("keydown", h2MenuUpDownArrowEvent);
-            item.addEventListener("keydown", h2MenuUpDownArrowEvent);
+            item.removeEventListener("keydown", h2MenuUpDownArrowEvent0017);
+            item.addEventListener("keydown", h2MenuUpDownArrowEvent0017);
           });
         }
       }
@@ -1023,31 +1023,31 @@ function h2MenuAddUpDownArrowsToMainMenuItems(targetMenu) {
   }
 }
 
-function h2MenuTabOrder(targetMenu) {
+function h2MenuTabOrder0017(targetMenu) {
   var hydrogenSystemVersion = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "latest";
   // Set the system check error value.
-  var functionError = "h2MenuTabOrder"; // Use the system check function to get the appropriate menu wrappers.
+  var functionError = "h2MenuTabOrder0017"; // Use the system check function to get the appropriate menu wrappers.
 
   var menuWrappers = h2MenuSystemCheck(targetMenu, hydrogenSystemVersion, functionError); // Loop through the available menu wrappers.
 
   if (menuWrappers != false) {
     menuWrappers.forEach(function (wrapper) {
-      var allMenuItems = h2MenuGetAllMenuItemsHandler(wrapper);
+      var allMenuItems = h2MenuGetAllMenuItemsHandler0017(wrapper);
 
       if (allMenuItems != false && allMenuItems != null && allMenuItems != undefined) {
         allMenuItems.forEach(function (item) {
-          item.removeEventListener("keydown", h2MenuTabExitEvent);
-          item.addEventListener("keydown", h2MenuTabExitEvent);
+          item.removeEventListener("keydown", h2MenuTabExitEvent0017);
+          item.addEventListener("keydown", h2MenuTabExitEvent0017);
         });
       }
     });
   }
 }
 
-function h2MenuAddRightArrowToMainMenuItems(targetMenu) {
+function h2MenuAddRightArrowToMainMenuItems0017(targetMenu) {
   var hydrogenSystemVersion = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "latest";
   // Set the system check error value.
-  var functionError = "h2MenuAddRightArrowToMainMenuItems"; // Use the system check function to get the appropriate menu wrappers.
+  var functionError = "h2MenuAddRightArrowToMainMenuItems0017"; // Use the system check function to get the appropriate menu wrappers.
 
   var menuWrappers = h2MenuSystemCheck(targetMenu, hydrogenSystemVersion, functionError); // Loop through the available menu wrappers.
 
@@ -1068,12 +1068,12 @@ function h2MenuAddRightArrowToMainMenuItems(targetMenu) {
 
 
       if (mainMenus != false && mainMenus != null && mainMenus != undefined) {
-        var mainMenuItemsWithSubmenu = h2MenuGetMenuListItemsWithSubmenusHandler(mainMenus); // Loop through each menu item and add the event listner.
+        var mainMenuItemsWithSubmenu = h2MenuGetMenuListItemsWithSubmenusHandler0017(mainMenus); // Loop through each menu item and add the event listner.
 
         if (mainMenuItemsWithSubmenu != false && mainMenuItemsWithSubmenu != null && mainMenuItemsWithSubmenu != undefined) {
           mainMenuItemsWithSubmenu.forEach(function (item) {
-            item.removeEventListener("keydown", h2MenuRightArrowEvent);
-            item.addEventListener("keydown", h2MenuRightArrowEvent);
+            item.removeEventListener("keydown", h2MenuRightArrowEvent0017);
+            item.addEventListener("keydown", h2MenuRightArrowEvent0017);
           });
         }
       }
@@ -1081,7 +1081,7 @@ function h2MenuAddRightArrowToMainMenuItems(targetMenu) {
   }
 }
 
-function h2MenuEnableSubmenuTriggers(targetMenu) {
+function h2MenuEnableSubmenuTriggers0017(targetMenu) {
   var hydrogenSystemVersion = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "latest";
   // Set the system check error value.
   var functionError = "h2MenuEnableSubmenuTriggers"; // Use the system check function to get the appropriate menu wrappers.
@@ -1104,8 +1104,8 @@ function h2MenuEnableSubmenuTriggers(targetMenu) {
 
       if (submenuTriggers != false) {
         submenuTriggers.forEach(function (item) {
-          item.removeEventListener("click", h2MenuToggleSubmenuEvent);
-          item.addEventListener("click", h2MenuToggleSubmenuEvent);
+          item.removeEventListener("click", h2MenuToggleSubmenuEvent0017);
+          item.addEventListener("click", h2MenuToggleSubmenuEvent0017);
         });
       }
     });
